@@ -1,0 +1,15 @@
+//MODIFIERS
+  @mixin offset {
+    .clefs {
+      @for $i from 1 through getVariable($grid, columns) {
+        
+        &:not(.-rev) > .offset-#{$i}:matches(.clef, [class*="clef-"]) {
+          margin-left: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+        }
+        &.-rev > .offset-#{$i}:matches(.clef, [class*="clef-"]) {
+          margin-right: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+        }
+      }
+    }
+  }
+// /MODIFIERS

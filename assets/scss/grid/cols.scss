@@ -1,0 +1,28 @@
+//COLS
+  @mixin cols {
+    .clefs {
+      //clefs default width
+      > :not([class*="clef-"], .clef) {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+    
+      //widths .clef-*
+      @for $i from 1 through getVariable($grid, columns) {
+        > .clef-#{$i} {
+          flex: 1 0 calc((100% / #{getVariable($grid, columns)}) * #{$i});
+          width: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+          max-width: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+        }
+      }
+    }
+    
+    //auto width
+    .clefs:not([class*="auto-"]) {
+      > .clef {
+        flex: 1;
+        max-width: 100%;
+      }
+    }
+  }
+// /COLS

@@ -1,0 +1,15 @@
+{
+  "name": "Clefs",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-postcss" : "*",
+    "gulp-sass" : "*",
+    "postcss-scss" : "*",
+    "cssnano" : "*",
+    "postcss-cssnext" : "*",
+    "postcss-partial-import": "*",
+    "gulp-sourcemaps" : "*",
+    "gulp-ext-replace" : "*"
+  }
+}

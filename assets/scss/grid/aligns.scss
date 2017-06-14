@@ -1,0 +1,81 @@
+//ALIGNS
+    @mixin aligns {
+        .clefs {
+            //vertical align
+            &.-left {
+                justify-content: flex-start;
+            }
+            &.-center {
+                justify-content: center;
+            }
+            &.-right {
+                justify-content: flex-end;
+            }
+            &.-between {
+                justify-content: space-between;
+            }
+            &.-around {
+                justify-content: space-around;
+            }
+            
+            &:not(.-claviers) {
+                //horizontal align don't wrap
+                &.-top {
+                    align-items: flex-start;
+                }
+                &.-middle {
+                    align-items: center;
+                }
+                &.-bottom {
+                    align-items: flex-end;
+                }
+                &.-baseline {
+                    align-items: baseline;
+                }
+                &.-stretch {
+                    align-items: stretch;
+                }
+            }
+            
+            &.-claviers {
+                &.-top {
+                    align-content: flex-start;
+                }
+                &.-middle {
+                    align-content: center;
+                }
+                &.-between {
+                    align-content: space-between;
+                }
+                &.-around {
+                    align-content: space-around;
+                }
+                &.-stretch {
+                    align-content: stretch;
+                }
+                &.-bottom {
+                    align-content: flex-end;
+                }
+            }
+            //CONTENT ALIGN
+            
+            
+            //SELF ALIGN
+            > .-intop {
+                align-self: flex-start;
+            }
+            > .-inmiddle {
+                align-self: center;
+            }
+            > .-inbottom {
+                align-self: flex-end;
+            }
+            > .-instretch {
+                align-self: stretch;
+            }
+            > .-inbaseline {
+                align-self: baseline;
+            }
+        }
+    }
+// /ALIGNS

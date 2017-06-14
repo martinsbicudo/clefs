@@ -1,0 +1,4 @@
+//GET MAP
+@function getVariable( $array, $index ) {
+    @return map-get( $array, $index );
+}

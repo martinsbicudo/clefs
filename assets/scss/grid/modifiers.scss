@@ -1,0 +1,28 @@
+//MODIFIERS
+  @mixin modifiers {
+    .clefs {
+      //modifier auto width
+      @for $i from 1 through getVariable($grid, columns) {
+        &.auto-#{$i} > .clef {
+          flex: 1 0 calc(100% / #{$i});
+          width: calc(100% / #{$i});
+          max-width: calc(100% / #{$i});
+        }
+      }
+      
+      //min width cols
+      @for $i from 1 through getVariable($grid, columns) {
+        > .min-#{($i * 100)} {
+          min-width: calc(#{$i} * 100px);
+        }
+      }
+      
+      //max width cols
+      @for $i from 1 through getVariable($grid, columns) {
+        > .max-#{($i * 100)} {
+          max-width: calc(#{$i} * 100px);
+        }
+      }
+    }
+  }
+// /MODIFIERS

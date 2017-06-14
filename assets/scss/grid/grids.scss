@@ -1,0 +1,52 @@
+//GRIDS
+  @mixin grids {
+    .container {
+      > .clefs {
+        //without .-nospace
+        &:not(.-nospace) {
+          margin-top: getVariable($grid, space) * -1;
+          margin-right: getVariable($grid, space) * -1;
+          margin-left: getVariable($grid, space) * -1;
+        }
+        
+        &:not(:last-child) {
+          margin-bottom: getVariable($grid, space);
+        }
+      }
+    
+      .clefs {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        
+        //without space in .clef/clef-* not .clefs
+        &:not(.-nospace) > :matches(.clef, [class*="clef-"]):not(.clefs) {
+            padding: getVariable($grid, space);
+        }
+        
+        &:not(.clef, [class*="clef-"]) {
+            flex-basis: 100%;
+            min-width: 100%;
+        }
+        
+        //reverse
+        .-rev:not(.-claviers) {
+            flex-direction: row-reverse;
+        }
+        
+        //claviers
+        &.-claviers {
+            flex-wrap: wrap;
+        }
+          //claviers reverse
+          &.-claviers.-rev {
+              flex-wrap: wrap-reverse;
+          }
+          &.-claviers.-redall {
+              flex-wrap: wrap-reverse;
+              flex-direction: row-reverse;
+          }
+      }
+    }
+  }
+// /GRIDS
