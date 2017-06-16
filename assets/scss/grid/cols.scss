@@ -4,24 +4,32 @@
       //clefs default width
       > :not([class*="clef-"], .clef) {
         flex: 0 0 auto;
-        max-width: 100%;
       }
     
       //widths .clef-*
       @for $i from 1 through getVariable($grid, columns) {
         > .clef-#{$i} {
-          flex: 1 0 calc((100% / #{getVariable($grid, columns)}) * #{$i});
-          width: calc((100% / #{getVariable($grid, columns)}) * #{$i});
-          max-width: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+          flex: 1 0 calc((100% / #{getVariable($grid, columns)} * #{$i}));
+          width: calc((100% / #{getVariable($grid, columns)} * #{$i}));
+        }
+        > .clef-#{$i}:not(.clefs) {
+          max-width: calc((100% / #{getVariable($grid, columns)} * #{$i}));
+        }
+        > .clef-#{$i}.clefs {
+          max-width: calc((100% / #{getVariable($grid, columns)} * #{$i}) + (#{getVariable($grid, space)} * 2));
         }
       }
+    }
+    
+    //without space in .clef/clef-* not .clefs
+    .clefs:not(.-nospace) > :matches(.clef, [class*="clef-"]) {
+        padding: getVariable($grid, space);
     }
     
     //auto width
     .clefs:not([class*="auto-"]) {
       > .clef {
-        flex: 1;
-        max-width: 100%;
+        flex: 1 1 0;
       }
     }
   }

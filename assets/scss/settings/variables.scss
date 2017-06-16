@@ -8,7 +8,7 @@
     $grid: (
         space: .75rem, //SPACE BETWEEN COLUMNS
         columns: 12, //NUMBER OF COLUMNS
-        responsiveTag: "xs" "sm" "md" "lg" "xl", //TAGS FOR RESPONSIVE
+        responsiveTag: "mobile" "plus" "tablet" "desktop" "wide", //TAGS FOR RESPONSIVE
         responsiveWidth: 368px 568px 768px 1024px 1280px //WIDTH FOR RESPONSIVE
     );
 

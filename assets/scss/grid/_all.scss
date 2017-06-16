@@ -4,6 +4,7 @@
     @import 'aligns';
     @import 'offset';
     @import 'modifiers';
+    @import 'responsive';
     
     //GRID MIXINS
     @if $grid {
@@ -13,5 +14,6 @@
             @include aligns;
             @include offset;
             @include modifiers;
+            @include responsive;
         /* /GRID*/
     }

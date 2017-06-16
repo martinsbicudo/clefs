@@ -34,7 +34,7 @@ textarea {
 
 /* /RESET CSS*/
 /*GRID*/
-.container > .clefs:not(.-nospace) {
+.container .clefs:not(.-nospace) {
   margin-top: -12px;
   margin-top: -0.75rem;
   margin-right: -12px;
@@ -42,9 +42,13 @@ textarea {
   margin-left: -12px;
   margin-left: -0.75rem; }
 
-.container > .clefs:not(:last-child) {
+.container .clefs:not(:last-child):not(.-nospace):not(.clef):not([class*="clef-"]) {
   margin-bottom: 12px;
   margin-bottom: 0.75rem; }
+
+.container .clefs.clef:not(.-nospace), .container .clefs[class*="clef-"]:not(.-nospace) {
+  margin-bottom: -12px;
+  margin-bottom: -0.75rem; }
 
 .container .clefs {
   display: -webkit-box;
@@ -57,9 +61,6 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-  .container .clefs:not(.-nospace) > .clef:not(.clefs), .container .clefs:not(.-nospace) > [class*="clef-"]:not(.clefs) {
-    padding: 12px;
-    padding: 0.75rem; }
   .container .clefs:not(.clef):not([class*="clef-"]) {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -86,98 +87,160 @@ textarea {
 .clefs > :not([class*="clef-"]):not(.clef) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  max-width: 100%; }
+          flex: 0 0 auto; }
 
 .clefs > .clef-1 {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 8.33333%;
           flex: 1 0 8.33333%;
-  width: 8.33333%;
+  width: 8.33333%; }
+
+.clefs > .clef-1:not(.clefs) {
   max-width: 8.33333%; }
+
+.clefs > .clef-1.clefs {
+  max-width: calc(8.33333% + 1.5rem); }
 
 .clefs > .clef-2 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 16.66666%;
-          flex: 1 0 16.66666%;
-  width: 16.66666%;
-  max-width: 16.66666%; }
+      -ms-flex: 1 0 16.66667%;
+          flex: 1 0 16.66667%;
+  width: 16.66667%; }
+
+.clefs > .clef-2:not(.clefs) {
+  max-width: 16.66667%; }
+
+.clefs > .clef-2.clefs {
+  max-width: calc(16.66667% + 1.5rem); }
 
 .clefs > .clef-3 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 24.99999%;
-          flex: 1 0 24.99999%;
-  width: 24.99999%;
-  max-width: 24.99999%; }
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  width: 25%; }
+
+.clefs > .clef-3:not(.clefs) {
+  max-width: 25%; }
+
+.clefs > .clef-3.clefs {
+  max-width: calc(25% + 1.5rem); }
 
 .clefs > .clef-4 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 33.33332%;
-          flex: 1 0 33.33332%;
-  width: 33.33332%;
-  max-width: 33.33332%; }
+      -ms-flex: 1 0 33.33333%;
+          flex: 1 0 33.33333%;
+  width: 33.33333%; }
+
+.clefs > .clef-4:not(.clefs) {
+  max-width: 33.33333%; }
+
+.clefs > .clef-4.clefs {
+  max-width: calc(33.33333% + 1.5rem); }
 
 .clefs > .clef-5 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 41.66665%;
-          flex: 1 0 41.66665%;
-  width: 41.66665%;
-  max-width: 41.66665%; }
+      -ms-flex: 1 0 41.66667%;
+          flex: 1 0 41.66667%;
+  width: 41.66667%; }
+
+.clefs > .clef-5:not(.clefs) {
+  max-width: 41.66667%; }
+
+.clefs > .clef-5.clefs {
+  max-width: calc(41.66667% + 1.5rem); }
 
 .clefs > .clef-6 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 49.99998%;
-          flex: 1 0 49.99998%;
-  width: 49.99998%;
-  max-width: 49.99998%; }
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  width: 50%; }
+
+.clefs > .clef-6:not(.clefs) {
+  max-width: 50%; }
+
+.clefs > .clef-6.clefs {
+  max-width: calc(50% + 1.5rem); }
 
 .clefs > .clef-7 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 58.33331%;
-          flex: 1 0 58.33331%;
-  width: 58.33331%;
-  max-width: 58.33331%; }
+      -ms-flex: 1 0 58.33333%;
+          flex: 1 0 58.33333%;
+  width: 58.33333%; }
+
+.clefs > .clef-7:not(.clefs) {
+  max-width: 58.33333%; }
+
+.clefs > .clef-7.clefs {
+  max-width: calc(58.33333% + 1.5rem); }
 
 .clefs > .clef-8 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 66.66664%;
-          flex: 1 0 66.66664%;
-  width: 66.66664%;
-  max-width: 66.66664%; }
+      -ms-flex: 1 0 66.66667%;
+          flex: 1 0 66.66667%;
+  width: 66.66667%; }
+
+.clefs > .clef-8:not(.clefs) {
+  max-width: 66.66667%; }
+
+.clefs > .clef-8.clefs {
+  max-width: calc(66.66667% + 1.5rem); }
 
 .clefs > .clef-9 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 74.99997%;
-          flex: 1 0 74.99997%;
-  width: 74.99997%;
-  max-width: 74.99997%; }
+      -ms-flex: 1 0 75%;
+          flex: 1 0 75%;
+  width: 75%; }
+
+.clefs > .clef-9:not(.clefs) {
+  max-width: 75%; }
+
+.clefs > .clef-9.clefs {
+  max-width: calc(75% + 1.5rem); }
 
 .clefs > .clef-10 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 83.3333%;
-          flex: 1 0 83.3333%;
-  width: 83.3333%;
-  max-width: 83.3333%; }
+      -ms-flex: 1 0 83.33333%;
+          flex: 1 0 83.33333%;
+  width: 83.33333%; }
+
+.clefs > .clef-10:not(.clefs) {
+  max-width: 83.33333%; }
+
+.clefs > .clef-10.clefs {
+  max-width: calc(83.33333% + 1.5rem); }
 
 .clefs > .clef-11 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 91.66663%;
-          flex: 1 0 91.66663%;
-  width: 91.66663%;
-  max-width: 91.66663%; }
+      -ms-flex: 1 0 91.66667%;
+          flex: 1 0 91.66667%;
+  width: 91.66667%; }
+
+.clefs > .clef-11:not(.clefs) {
+  max-width: 91.66667%; }
+
+.clefs > .clef-11.clefs {
+  max-width: calc(91.66667% + 1.5rem); }
 
 .clefs > .clef-12 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 99.99996%;
-          flex: 1 0 99.99996%;
-  width: 99.99996%;
-  max-width: 99.99996%; }
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  width: 100%; }
+
+.clefs > .clef-12:not(.clefs) {
+  max-width: 100%; }
+
+.clefs > .clef-12.clefs {
+  max-width: calc(100% + 1.5rem); }
+
+.clefs:not(.-nospace) > .clef, .clefs:not(.-nospace) > [class*="clef-"] {
+  padding: 12px;
+  padding: 0.75rem; }
 
 .clefs:not([class*="auto-"]) > .clef {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  max-width: 100%; }
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0; }
 
 .clefs.-left {
   -webkit-box-pack: start;
@@ -346,84 +409,84 @@ textarea {
 .clefs.-rev > .offset-12.clef, .clefs.-rev > .offset-12[class*="clef-"] {
   margin-right: 99.99996%; }
 
-.clefs.auto-1 > .clef {
+.clefs.only-1 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
   width: 100%;
   max-width: 100%; }
 
-.clefs.auto-2 > .clef {
+.clefs.only-2 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
   width: 50%;
   max-width: 50%; }
 
-.clefs.auto-3 > .clef {
+.clefs.only-3 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 33.33333%;
           flex: 1 0 33.33333%;
   width: 33.33333%;
   max-width: 33.33333%; }
 
-.clefs.auto-4 > .clef {
+.clefs.only-4 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
   width: 25%;
   max-width: 25%; }
 
-.clefs.auto-5 > .clef {
+.clefs.only-5 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 20%;
           flex: 1 0 20%;
   width: 20%;
   max-width: 20%; }
 
-.clefs.auto-6 > .clef {
+.clefs.only-6 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 16.66667%;
           flex: 1 0 16.66667%;
   width: 16.66667%;
   max-width: 16.66667%; }
 
-.clefs.auto-7 > .clef {
+.clefs.only-7 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 14.28571%;
           flex: 1 0 14.28571%;
   width: 14.28571%;
   max-width: 14.28571%; }
 
-.clefs.auto-8 > .clef {
+.clefs.only-8 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 12.5%;
           flex: 1 0 12.5%;
   width: 12.5%;
   max-width: 12.5%; }
 
-.clefs.auto-9 > .clef {
+.clefs.only-9 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 11.11111%;
           flex: 1 0 11.11111%;
   width: 11.11111%;
   max-width: 11.11111%; }
 
-.clefs.auto-10 > .clef {
+.clefs.only-10 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 10%;
           flex: 1 0 10%;
   width: 10%;
   max-width: 10%; }
 
-.clefs.auto-11 > .clef {
+.clefs.only-11 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 9.09091%;
           flex: 1 0 9.09091%;
   width: 9.09091%;
   max-width: 9.09091%; }
 
-.clefs.auto-12 > .clef {
+.clefs.only-12 > .clef {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 8.33333%;
           flex: 1 0 8.33333%;
@@ -501,5 +564,135 @@ textarea {
 
 .clefs > .max-1200 {
   max-width: 1200px; }
+
+@media (max-width: 368px) {
+  .clefs.-claviers > .clef.-mobile:not(.-increase), .clefs.-claviers > [class*="clef-"].-mobile:not(.-increase) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-mobile:not(.-increase):not(.clefs), .clefs.-claviers > [class*="clef-"].-mobile:not(.-increase):not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-mobile:not(.-increase).clefs, .clefs.-claviers > [class*="clef-"].-mobile:not(.-increase).clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (min-width: 368px) {
+  .clefs.-claviers > .clef.-mobile.-increase, .clefs.-claviers > [class*="clef-"].-mobile.-increase {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-mobile.-increase:not(.clefs), .clefs.-claviers > [class*="clef-"].-mobile.-increase:not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-mobile.-increase.clefs, .clefs.-claviers > [class*="clef-"].-mobile.-increase.clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (max-width: 568px) {
+  .clefs.-claviers > .clef.-plus:not(.-increase), .clefs.-claviers > [class*="clef-"].-plus:not(.-increase) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-plus:not(.-increase):not(.clefs), .clefs.-claviers > [class*="clef-"].-plus:not(.-increase):not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-plus:not(.-increase).clefs, .clefs.-claviers > [class*="clef-"].-plus:not(.-increase).clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (min-width: 568px) {
+  .clefs.-claviers > .clef.-plus.-increase, .clefs.-claviers > [class*="clef-"].-plus.-increase {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-plus.-increase:not(.clefs), .clefs.-claviers > [class*="clef-"].-plus.-increase:not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-plus.-increase.clefs, .clefs.-claviers > [class*="clef-"].-plus.-increase.clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (max-width: 768px) {
+  .clefs.-claviers > .clef.-tablet:not(.-increase), .clefs.-claviers > [class*="clef-"].-tablet:not(.-increase) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-tablet:not(.-increase):not(.clefs), .clefs.-claviers > [class*="clef-"].-tablet:not(.-increase):not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-tablet:not(.-increase).clefs, .clefs.-claviers > [class*="clef-"].-tablet:not(.-increase).clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (min-width: 768px) {
+  .clefs.-claviers > .clef.-tablet.-increase, .clefs.-claviers > [class*="clef-"].-tablet.-increase {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-tablet.-increase:not(.clefs), .clefs.-claviers > [class*="clef-"].-tablet.-increase:not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-tablet.-increase.clefs, .clefs.-claviers > [class*="clef-"].-tablet.-increase.clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (max-width: 1024px) {
+  .clefs.-claviers > .clef.-desktop:not(.-increase), .clefs.-claviers > [class*="clef-"].-desktop:not(.-increase) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-desktop:not(.-increase):not(.clefs), .clefs.-claviers > [class*="clef-"].-desktop:not(.-increase):not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-desktop:not(.-increase).clefs, .clefs.-claviers > [class*="clef-"].-desktop:not(.-increase).clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (min-width: 1024px) {
+  .clefs.-claviers > .clef.-desktop.-increase, .clefs.-claviers > [class*="clef-"].-desktop.-increase {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-desktop.-increase:not(.clefs), .clefs.-claviers > [class*="clef-"].-desktop.-increase:not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-desktop.-increase.clefs, .clefs.-claviers > [class*="clef-"].-desktop.-increase.clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (max-width: 1280px) {
+  .clefs.-claviers > .clef.-wide:not(.-increase), .clefs.-claviers > [class*="clef-"].-wide:not(.-increase) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-wide:not(.-increase):not(.clefs), .clefs.-claviers > [class*="clef-"].-wide:not(.-increase):not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-wide:not(.-increase).clefs, .clefs.-claviers > [class*="clef-"].-wide:not(.-increase).clefs {
+    max-width: calc(100%  + 1.5rem); } }
+
+@media (min-width: 1280px) {
+  .clefs.-claviers > .clef.-wide.-increase, .clefs.-claviers > [class*="clef-"].-wide.-increase {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%; }
+  .clefs.-claviers > .clef.-wide.-increase:not(.clefs), .clefs.-claviers > [class*="clef-"].-wide.-increase:not(.clefs) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0; }
+  .clefs.-claviers > .clef.-wide.-increase.clefs, .clefs.-claviers > [class*="clef-"].-wide.-increase.clefs {
+    max-width: calc(100%  + 1.5rem); } }
 
 /* /GRID*/
