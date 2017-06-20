@@ -1,9 +1,9 @@
 //MODIFIERS
   @mixin modifiers {
     .clefs {
-      //modifier only width
-      @for $i from 1 through getVariable($grid, columns) {
-        &.only-#{$i} > .clef {
+      //modifier auto width
+      @for $i from 1 through map-get($grid, columns) {
+        &.auto-#{$i} > .clef:not(.-noauto) {
           flex: 1 0 calc(100% / #{$i});
           width: calc(100% / #{$i});
           max-width: calc(100% / #{$i});
@@ -11,14 +11,14 @@
       }
       
       //min width cols
-      @for $i from 1 through getVariable($grid, columns) {
+      @for $i from 1 through map-get($grid, columns) {
         > .min-#{($i * 100)} {
           min-width: calc(#{$i} * 100px);
         }
       }
       
       //max width cols
-      @for $i from 1 through getVariable($grid, columns) {
+      @for $i from 1 through map-get($grid, columns) {
         > .max-#{($i * 100)} {
           max-width: calc(#{$i} * 100px);
         }

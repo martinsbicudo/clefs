@@ -1,19 +1,20 @@
 //GRID IMPORTS
-    @import 'grids';
-    @import 'cols';
-    @import 'aligns';
-    @import 'offset';
-    @import 'modifiers';
-    @import 'responsive';
+  @import
+    'grids',
+    'cols',
+    'aligns',
+    'offset',
+    'modifiers',
+    'responsive';
     
-    //GRID MIXINS
-    @if $grid {
-        /*GRID*/
-            @include grids;
-            @include cols;
-            @include aligns;
-            @include offset;
-            @include modifiers;
-            @include responsive;
-        /* /GRID*/
-    }
+  //GRID MIXINS
+  @if $grid {
+    /*GRID*/
+    @include grids;
+    @include cols;
+    @include aligns;
+    @include offset;
+    @include modifiers;
+    @include responsive;
+    /* /GRID*/
+  }

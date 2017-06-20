@@ -1,41 +1,6 @@
 //RESPONSIVE
   @mixin responsive {
-    @each $tag in getVariable($grid, responsiveTag) {
-      //responsive when decrease window
-      @media (max-width:nth(getVariable($grid, responsiveWidth), index(getVariable($grid, responsiveTag), $tag))) {
-        .clefs.-claviers {
-          > :matches(.clef, [class*="clef-"]).-#{$tag}:not(.-increase) {
-            flex: 1 1 100%;
-            width: 100%;
-          }
-          > :matches(.clef, [class*="clef-"]).-#{$tag}:not(.-increase, .clefs) {
-            max-width: 100%;
-            margin-right: 0;
-            margin-left: 0;
-          }
-          > :matches(.clef, [class*="clef-"]).-#{$tag}:not(.-increase).clefs {
-            max-width: calc(100%  + (#{getVariable($grid, space)} * 2));
-          }
-        }
-      }
-      
-      //responsive when increase window
-      @media (min-width:nth(getVariable($grid, responsiveWidth), index(getVariable($grid, responsiveTag), $tag))) {
-        .clefs.-claviers {
-          > :matches(.clef, [class*="clef-"]).-#{$tag}.-increase{
-            flex: 1 1 100%;
-            width: 100%;
-          }
-          > :matches(.clef, [class*="clef-"]).-#{$tag}.-increase:not(.clefs) {
-            max-width: 100%;
-            margin-right: 0;
-            margin-left: 0;
-          }
-          > :matches(.clef, [class*="clef-"]).-#{$tag}.-increase.clefs {
-            max-width: calc(100%  + (#{getVariable($grid, space)} * 2));
-          }
-        }
-      }
-    }
+    //CALL GRIDS
+    @include grid-query();
   }
 // /RESPONSIVE

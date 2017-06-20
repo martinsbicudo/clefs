@@ -1,0 +1,105 @@
+//MIXINS GRID
+
+//min width
+@mixin query-min($name, $queries: $grid-responsive) {
+  $min: map-get($queries, $name);
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+//max width
+@mixin query-max($name, $queries: $grid-responsive) {
+  $max: map-get($queries, $name);
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+//between queries widths
+@mixin query-between($min, $max, $queries: $grid-responsive) {
+  $min: map-get($queries, $min);
+  $max: map-get($queries, $max);
+  
+  @media (min-width: $min) and (max-width: $max - 1px) {
+    @content;
+  }
+}
+
+//get query
+//reverse queries set TRUE
+@mixin get-query($name) {
+  $next: getNextQuery($name);
+  
+  @if( $next ) {
+    @include query-between($name, $next) {
+      @content;
+    }
+  }@else{
+    @include query-min($name) {
+      @content;
+    }
+  }
+}
+
+//style grids 
+@mixin style-grid-default($i: 12, $columns: map-get($grid, columns)) {
+  @if($i == 12) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }@else{
+    flex: 1 0 calc((100% / #{$columns} * #{$i}));
+    max-width: calc((100% / #{$columns} * #{$i}));
+  }
+}
+@mixin style-grid-first($i: 12, $columns: map-get($grid, columns)) {
+  @if($i == 12) {
+    min-width: 100%;
+  }@else{
+    min-width: calc((100% / #{$columns} * #{$i}));
+  }
+  
+  margin-right: 0;
+  margin-left: 0;
+}
+@mixin style-grid-second($i: 12, $columns: map-get($grid, columns)) {
+  @if($i == 12) {
+    min-width: calc(100%  + (#{map-get($grid, space)} * 2));
+  }@else{
+    min-width: calc((100% / #{map-get($grid, columns)} * #{$i}) + (#{map-get($grid, space)} * 2));
+  }
+}
+
+//aply grids
+@mixin aply-grids($tag, $grid-tags: map-keys($grid-responsive), $grid-widths: map-values($grid-responsive)) {
+  $i: index($grid-tags, $tag);
+  
+  .clefs.-claviers {
+    //widths specifics
+    @for $i from 1 through map-get($grid, columns) {
+      > .#{$tag}-#{$i} {
+        @include style-grid-default($i);
+      }
+      > :not(.clefs).#{$tag}-#{$i},
+      > .clefs:not(.clef, [class*="clef-"]).#{$tag}-#{$i}{
+        @include style-grid-first($i);
+      }
+      > .clefs:matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+        @include style-grid-second($i);
+      }
+    }
+  }
+}
+
+//grid query
+//reverse default: FALSE
+//reverse queries set TRUE
+@mixin grid-query() {
+  @each $tag in map-keys($grid-responsive) {
+    @include get-query($tag) {
+      @include aply-grids($tag);
+    }
+  }
+}
+
+// /MIXINS GRID

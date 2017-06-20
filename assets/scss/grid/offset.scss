@@ -1,13 +1,13 @@
 //MODIFIERS
   @mixin offset {
     .clefs {
-      @for $i from 1 through getVariable($grid, columns) {
+      @for $i from 1 through map-get($grid, columns) {
         
         &:not(.-rev) > .offset-#{$i}:matches(.clef, [class*="clef-"]) {
-          margin-left: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+          margin-left: calc((100% / #{map-get($grid, columns)}) * #{$i});
         }
         &.-rev > .offset-#{$i}:matches(.clef, [class*="clef-"]) {
-          margin-right: calc((100% / #{getVariable($grid, columns)}) * #{$i});
+          margin-right: calc((100% / #{map-get($grid, columns)}) * #{$i});
         }
       }
     }

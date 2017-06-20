@@ -1,34 +1,34 @@
 //COLS
   @mixin cols {
     .clefs {
-      //clefs default width
-      > :not([class*="clef-"], .clef) {
+      //clefs no auto width
+      > .clef.-noauto {
         flex: 0 0 auto;
       }
     
       //widths .clef-*
-      @for $i from 1 through getVariable($grid, columns) {
+      @for $i from 1 through map-get($grid, columns) {
         > .clef-#{$i} {
-          flex: 1 0 calc((100% / #{getVariable($grid, columns)} * #{$i}));
-          width: calc((100% / #{getVariable($grid, columns)} * #{$i}));
+          flex: 1 0 calc((100% / #{map-get($grid, columns)} * #{$i}));
+          width: calc((100% / #{map-get($grid, columns)} * #{$i}));
         }
         > .clef-#{$i}:not(.clefs) {
-          max-width: calc((100% / #{getVariable($grid, columns)} * #{$i}));
+          max-width: calc((100% / #{map-get($grid, columns)} * #{$i}));
         }
         > .clef-#{$i}.clefs {
-          max-width: calc((100% / #{getVariable($grid, columns)} * #{$i}) + (#{getVariable($grid, space)} * 2));
+          max-width: calc((100% / #{map-get($grid, columns)} * #{$i}) + (#{map-get($grid, space)} * 2));
         }
       }
     }
     
     //without space in .clef/clef-* not .clefs
     .clefs:not(.-nospace) > :matches(.clef, [class*="clef-"]) {
-        padding: getVariable($grid, space);
+        padding: map-get($grid, space);
     }
     
     //auto width
     .clefs:not([class*="auto-"]) {
-      > .clef {
+      > .clef:not(.-noauto) {
         flex: 1 1 0;
       }
     }

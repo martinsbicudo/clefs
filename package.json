@@ -5,10 +5,8 @@
     "gulp": "*",
     "gulp-postcss" : "*",
     "gulp-sass" : "*",
-    "postcss-scss" : "*",
     "cssnano" : "*",
     "postcss-cssnext" : "*",
-    "postcss-partial-import": "*",
     "gulp-sourcemaps" : "*",
     "gulp-ext-replace" : "*"
   }

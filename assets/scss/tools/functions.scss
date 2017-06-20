@@ -1,4 +1,23 @@
-//GET MAP
-@function getVariable( $array, $index ) {
-    @return map-get( $array, $index );
+//FUNCTIONS
+
+//---------------- DEFAULT
+@function getValue( $array, $index ) {
+  @return map-get( $array, $index );
 }
+
+@function getNext($list, $search) {
+  $i: index($list, $search);
+  $length: length($list);
+  
+  @return if($i < $length, nth($list, $i + 1), null);
+}
+//---------------- /DEFAULT
+
+//---------------- GRID
+@function getNextQuery($name, $grid-names: map-keys($grid-responsive)) {
+  $next-query: getNext($grid-names, $name);
+  @return $next-query;
+}
+//---------------- /GRID
+
+// /FUNCTIONS

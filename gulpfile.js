@@ -5,7 +5,6 @@ var gulp = require('gulp')
   , postcss = require('gulp-postcss')
   , cssnano = require('cssnano')
   , cssnext = require('postcss-cssnext')
-  , scss = require('postcss-scss')
   
   //DEFAULT
   , sass = require('gulp-sass')
