@@ -15,15 +15,12 @@ var gulp = require('gulp')
 var paths = {
 	src : {
 		css 	: {
-		  sass : 'assets/scss/clefs.scss',
-		  watch : 'assets/scss/**/*.scss',
+		  sass : 'assets/clefs/clefs.scss',
+		  watch : 'assets/clefs/**/*.scss',
 		}
 	} ,
 	dest : {
-		css 	: 	'assets/',
-		beauty : {
-		  css  : 'assets/beauty'
-		}
+		css 	: 	'css/'
 	}
 }
 
