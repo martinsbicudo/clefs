@@ -15,8 +15,8 @@ var gulp = require('gulp')
 var paths = {
 	src : {
 		css 	: {
-		  sass : 'assets/clefs/main.scss',
-		  watch : 'assets/clefs/**/*.scss',
+		  sass : 'assets/scss/clefs.scss',
+		  watch : 'assets/scss/**/*.scss',
 		}
 	} ,
 	dest : {
@@ -37,12 +37,11 @@ gulp.task('css', function(){
     ]).on('error', function(err) {
         console.log(err.message);
     }))
-    .pipe(ext_replace('.beauty.css'))
     .pipe(gulp.dest( paths.dest.css ))
     .pipe(postcss([
       cssnano
     ]))
-    .pipe(ext_replace('.css', '.beauty.css'))
+    .pipe(ext_replace('.min.css'))
     .pipe(sourcemaps.write( '.' ))
     .pipe(gulp.dest( paths.dest.css ));
 });
