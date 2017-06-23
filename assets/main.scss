@@ -1,3 +1,24 @@
 ---
 ---
-@import 'test';
+//COMPONENTS
+@import
+  'components/variables',
+  'components/backgrounds',
+  'components/colors',
+  'components/paddings',
+  'components/margins',
+  'components/sizes';
+
+//DEFAULT
+@import
+  'fonts',
+  'classes';
+
+//LAYOUT
+@import
+  'layout/default',
+  'layout/header';
+  
+//CONTENT
+@import
+  'content/default';

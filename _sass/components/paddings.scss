@@ -1,0 +1,19 @@
+/*PADDINGS*/
+  @for $i from 1 through 10 {
+    .pd-#{$i * 10}:not([class*="-pd"]) {
+      padding: #{$i * 10 * 1px};
+    }
+    .pd-#{$i * 10}.-pdl {
+      padding-left: #{$i * 10 * 1px};
+    }
+    .pd-#{$i * 10}.-pdr {
+      padding-right: #{$i * 10 * 1px};
+    }
+    .pd-#{$i * 10}.-pdt {
+      padding-top: #{$i * 10 * 1px};
+    }
+    .pd-#{$i * 10}.-pdb {
+      padding-bottom: #{$i * 10 * 1px};
+    }
+  }
+/* /PADDINGS*/

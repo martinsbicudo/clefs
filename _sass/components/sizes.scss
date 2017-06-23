@@ -1,0 +1,7 @@
+/*SIZES*/
+  @for $i from 14 through 100 {
+    .size-#{$i} {
+      font-size: #{$i * 1px};
+    }
+  }
+/* /SIZES*/

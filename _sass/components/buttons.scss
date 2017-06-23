@@ -1,0 +1,16 @@
+/*BUTTONS*/
+  .btn, [class*="btn-"] {
+    padding: 15px 20px;
+    border-bottom: 3px inside rgba(0, 0, 0, .2);
+  }
+  .btn-white {
+    color: $first-color;
+    background: #fff;
+  }
+  @each $tag in $tags {
+    .btn-#{$tag} {
+      color: #fff;
+      background: nth($colors, index($tags, $tag));
+    }
+  }
+/* /BUTTONS*/

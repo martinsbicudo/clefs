@@ -1,0 +1,10 @@
+/*BACKGROUNDS*/
+  .bg-white {
+    background: #fff;
+  }
+  @each $tag in $tags {
+    .bg-#{$tag} {
+      background: nth($colors, index($tags, $tag));
+    }
+  }
+/* /BACKGROUNDS*/

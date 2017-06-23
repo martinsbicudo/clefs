@@ -1,0 +1,36 @@
+//CONTENT
+  .page-title {
+    @extend .font-lobster;
+    @extend .text-center;
+    @extend .size-100;
+    @extend .color-first;
+  }
+  
+  .page-description {
+    @extend .text-center;
+    @extend .size-20;
+    padding: 15px 0;
+    font-weight: bolder;
+    font-style: italic;
+  }
+  
+  .page-subtitle {
+    .class {
+      @extend .bg-first;
+      @extend .color-white;
+      @extend .size-14;
+      padding: 2px 3px;
+      border-radius: 2px;
+    }
+    .link {
+      text-decoration: none;
+    }
+    .fa {
+      color: lighten(gray, 10%);
+      margin-right: 10px;
+      transition: .2s;
+      
+      &:hover { color: #000 }
+    }
+  }
+// /CONTENT

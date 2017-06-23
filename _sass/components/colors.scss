@@ -1,0 +1,10 @@
+/*COLORS*/
+  .color-white {
+    color: #fff;
+  }
+  @each $tag in $tags {
+    .color-#{$tag} {
+      color: nth($colors, index($tags, $tag));
+    }
+  }
+/* /COLORS*/

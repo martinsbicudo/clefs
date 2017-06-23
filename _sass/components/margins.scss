@@ -1,0 +1,19 @@
+/*MARGINS*/
+  @for $i from 1 through 10 {
+    .mg-#{$i * 10}:not([class*="-mg"]) {
+      margin: #{$i * 10 * 1px};
+    }
+    .mg-#{$i * 10}.-mgl {
+      margin-left: #{$i * 10 * 1px};
+    }
+    .mg-#{$i * 10}.-mgr {
+      margin-right: #{$i * 10 * 1px};
+    }
+    .mg-#{$i * 10}.-mgt {
+      margin-top: #{$i * 10 * 1px};
+    }
+    .mg-#{$i * 10}.-mgb {
+      margin-bottom: #{$i * 10 * 1px};
+    }
+  }
+/* /MARGINS*/
