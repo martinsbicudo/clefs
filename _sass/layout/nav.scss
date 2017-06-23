@@ -1,0 +1,79 @@
+//NAV
+.nav {
+  width: 50px;
+
+  &,
+  .list {
+    min-height: 100vh;
+    padding-top: 50px;
+  }
+  .list {
+    width: inherit;
+    background: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .item[data-active="true"]:not(:hover) .name {
+    @extend .color-first;
+    left: 5px;
+    right: -5px;
+  }
+  .item:not([data-active="true"]) .name {
+    opacity: 0;
+  }
+  .item:hover .name {
+    left: 50px;
+    box-shadow: .2em .2em .2em 0 rgba(0, 0, 0, .2);
+    opacity: 1;
+  }
+  .item:hover,
+  .item[data-active="true"] {
+    .link { z-index: 1 }
+    .fa {
+      @extend .bg-first;
+      box-shadow: .05em 0 .05em 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+  &,
+  .link,
+  .link .fa {
+    background: #040404;
+  }
+  .link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-bottom: 1px solid lighten(#000, 5%);
+  }
+  .link,
+  .link > .fa {
+    width: 100%;
+    height: 50px;
+  }
+  .link > .fa {
+    @extend .text-center;
+    line-height: 50px;
+  }
+  .link,
+  .name {
+    @extend .color-white;
+  }
+  .name {
+    @extend .color-white;
+    @extend .font-khand;
+    @extend .bg-first;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: -80px;
+    z-index: -1;
+    padding: 0 20px;
+    transition: .1s;
+    border-radius: 0 5px 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+/* /NAV*/

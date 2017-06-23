@@ -1,7 +1,7 @@
-<!-- header menu -->
-<nav class="menu clefs clef -noauto">
+<!-- header nav -->
+<nav class="nav clefs clef -noauto">
   <ul class="list clefs -claviers -nospace">
-    <li class="item clef -noauto">
+    <li class="item clef -noauto" data-active="{% if page.title == null %}true{% else %}false{% endif %}">
       <a class="link" href="/">
         <i class="fa fa-university"></i>
         <span class="name">
@@ -9,7 +9,15 @@
         </span>
       </a>
     </li>
-    <li class="item clef -noauto">
+    <li class="item clef -noauto" data-active="{% if page.title == 'Documentation' %}true{% else %}false{% endif %}">
+      <a class="link" href="/grid">
+        <i class="fa fa-book"></i>
+        <span class="name">
+          DOCUMENTATION
+        </span>
+      </a>
+    </li>
+    <li class="item clef -noauto" data-active="{% if page.title == 'Grid' %}true{% else %}false{% endif %}">
       <a class="link" href="/grid">
         <i class="fa fa-th-large"></i>
         <span class="name">
@@ -17,7 +25,7 @@
         </span>
       </a>
     </li>
-    <li class="item clef -noauto">
+    <li class="item clef -noauto" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
       <a class="link" href="/components">
         <i class="fa fa-archive"></i>
         <span class="name">
@@ -25,7 +33,7 @@
         </span>
       </a>
     </li>
-    <li class="item clef -noauto">
+    <li class="item clef -noauto" data-active="{% if page.title == 'About' %}true{% else %}false{% endif %}">
       <a class="link" href="/about">
         <i class="fa fa-info"></i>
         <span class="name">
@@ -33,8 +41,8 @@
         </span>
       </a>
     </li>
-    <li class="item clef -noauto">
-      <a class="link" href="/download">
+    <li class="item clef -noauto" data-active="false">
+      <a class="link" href="#">
         <i class="fa fa-download"></i>
         <span class="name">
           DOWNLOAD
@@ -42,4 +50,4 @@
       </a>
     </li>
   </ul>
-</nav><!-- /header menu -->
+</nav><!-- /header nav -->

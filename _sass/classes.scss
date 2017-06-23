@@ -1,17 +1,16 @@
 /*CLASSES*/
-  .container .container {
+  .container {
     width: 95%;
     max-width: 1366px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 50px;
   }
-  
+
   //text
   .text-center {
     text-align: center;
   }
-  
+
   //code
   .code-box {
     display: flex;
@@ -21,7 +20,7 @@
     max-height: 600px;
     max-width: 100%;
     word-wrap: normal;
-    
+
     code {
       @extend .pd-20;
       min-width: 100%;

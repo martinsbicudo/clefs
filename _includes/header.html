@@ -1,89 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>
-    {% if page.title %} {{page.title}} | {% endif %} {{site.title}}
-  </title>  
-  <meta name="viewport" content="width=device-width" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Cache-Control: max-age=3600, must-revalidate"/>
-  <meta http-equiv="Content-Language" content="pt-br, en">
-  
-  <!-- styles -->
-  <link rel="stylesheet" href="/css/clefs.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/main.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-</head>
-<body>
-  <header class="header">
-    <!-- header top -->
-    <section class="container pd-10 -pdt -pdb">
-      <div class="clefs">
-        <div class="clef">
-          <!--<button class="open-menu" data-active="false">
-            <span class="bar"></span>
-          </button>-->
+<!-- header -->
+<header class="header pd-10 -pdt -pdb">
+  <!-- open nav -->
+  <div class="open-nav-box">
+    <button class="open-nav" data-active="false">
+      <span class="bar"></span>
+    </button>
+  </div><!-- /end open nav -->
+  <section class="container">
+    <div class="box clefs">
+      <div class="clefs -center -middle">
+        <div class="clef -noauto">
+          <a class="social-link" href="#">
+            <i class="fa fa-github"></i>
+          </a>
         </div>
-        <div class="clefs -noauto -middle">
-          <div class="clef -noauto">
-            <a class="social-link" href="#">
-              <i class="fa fa-github"></i>
-            </a>
-          </div>
-          <div class="clef -noauto">
-            <a class="social-link" href="#">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </div>
+        <div class="clef -noauto">
+          <a class="social-link" href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
         </div>
-        <div class="clef"></div>
       </div>
-    </section><!-- /header top -->
-    
-    <!-- header menu -->
-    <!--<nav class="menu container">
-      <ul class="list clefs -claviers -nospace">
-        <li class="item clef -noauto">
-          <a class="link" href="/">
-            <i class="fa fa-university"></i>
-            <span class="name">
-              HOME
-            </span>
-          </a>
-        </li>
-        <li class="item clef -noauto">
-          <a class="link" href="/grid">
-            <i class="fa fa-th-large"></i>
-            <span class="name">
-              GRID
-            </span>
-          </a>
-        </li>
-        <li class="item clef -noauto">
-          <a class="link" href="/components">
-            <i class="fa fa-archive"></i>
-            <span class="name">
-              COMPONENTS
-            </span>
-          </a>
-        </li>
-        <li class="item clef -noauto">
-          <a class="link" href="/about">
-            <i class="fa fa-info"></i>
-            <span class="name">
-              ABOUT
-            </span>
-          </a>
-        </li>
-        <li class="item clef -noauto">
-          <a class="link" href="/download">
-            <i class="fa fa-download"></i>
-            <span class="name">
-              DOWNLOAD
-            </span>
-          </a>
-        </li>
-      </ul>
-    </nav>--><!-- /header menu -->
-  </header>
+    </div>
+  </section>
+</header><!-- /end header -->
