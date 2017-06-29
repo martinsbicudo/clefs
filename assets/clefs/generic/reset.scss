@@ -1,0 +1,29 @@
+@mixin reset() {
+  /*RESET*/
+  * {
+    //@extend .font-first;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  html, body {
+    min-height: 100vh;
+
+    //fallback flexbox IOS
+    width: 100%;
+  }
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+  iframe {
+    display: block;
+  }
+  textarea {
+    resize: none;
+  }
+  /* /RESET*/
+}

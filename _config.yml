@@ -33,3 +33,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - assets/clefs
+  - node_modules

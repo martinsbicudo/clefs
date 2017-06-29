@@ -1,0 +1,70 @@
+//MIXINS GRID
+//aply grids
+@mixin aply-grids($tag, $values) {
+  $columns: map-get($values, columns);
+  $space: map-get($values, space);
+  $tags: map-get($values, tags);
+  $i: index(map-keys($tags), $tag);
+
+  .clefs {
+    //widths specifics
+    @for $i from 1 through $columns {
+      > .#{$tag}-#{$i} {
+        flex: 1 0 calc((100% / #{$columns} * #{$i}));
+      }
+      > :not(.clefs):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
+      > .clefs:not(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+        max-width: calc((100% / #{$columns} * #{$i}));
+      }
+      > .clefs:matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+        max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
+      }
+    }
+  }
+}
+
+//grid query
+@mixin grid-query($values) {
+  $tags: map-get($values, tags);
+  @each $tag in map-keys($tags) {
+    @include get-query($tag, $tags) {
+      @include aply-grids($tag, $values);
+    }
+  }
+}
+
+//enable grid components
+@mixin grid($values) {
+  //GET VALUES
+  $space: map-get($values, space);
+  $columns: map-get($values, columns);
+  $tags: map-get($values, tags);
+  $enable: map-get($values, enable);
+  $enables: map-get($values, enables);
+
+  //ENABLES
+  $aligns: map-get($enables, aligns);
+  $auto: map-get($enables, auto);
+  $cols: map-get($enables, cols);
+  $debug: map-get($enables, debug);
+  $grids: map-get($enables, grids);
+  $max: map-get($enables, max);
+  $min: map-get($enables, min);
+  $offset: map-get($enables, offset);
+  $order: map-get($enables, order);
+  $responsive: map-get($enables, responsive);
+
+  /*GRID*/
+  @if($aligns){@include aligns;}
+  @if($auto){@include auto($columns);}
+  @if($cols){@include cols($space, $columns);}
+  @if($debug){@include debug($space);}
+  @if($grids){@include grids($space);}
+  @if($max){@include max($columns);}
+  @if($min){@include min($columns);}
+  @if($offset){@include offset($columns);}
+  @if($order){@include order($columns);}
+  @if($responsive){@include responsive($values);}
+  /* /GRID*/
+}
+// /MIXINS GRID

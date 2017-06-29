@@ -1,0 +1,126 @@
+@mixin aligns {
+  /*ALIGNS*/
+  .clefs {
+    //---------------- JUSTIFY
+    //without .-claviers = horizontal
+    //with .-claviers = vertical
+
+    &.-between {
+      justify-content: space-between;
+    }
+    &.-around {
+      justify-content: space-around;
+    }
+
+    //align without .-claviers
+    &:not(.-claviers) {
+      &.-left {
+        justify-content: flex-start;
+      }
+      &.-center {
+        justify-content: center;
+      }
+      &.-right {
+        justify-content: flex-end;
+      }
+    }
+
+    //align with .-claviers
+    &.-claviers {
+      &.-top {
+        justify-content: flex-start;
+      }
+      &.-middle {
+        justify-content: center;
+      }
+      &.-bottom {
+        justify-content: flex-end;
+      }
+    }
+    //---------------- /JUSTIFY
+
+
+    //---------------- VERTICAL
+    //without .-claviers
+    &:not(.-claviers) {
+      //horizontal align not wrap
+      &.-top {
+        align-items: flex-start;
+      }
+      &.-middle {
+        align-items: center;
+      }
+      &.-bottom {
+        align-items: flex-end;
+      }
+      &.-baseline {
+        align-items: baseline;
+      }
+      &.-stretch {
+        align-items: stretch;
+      }
+    }
+    //---------------- /VERTICAL
+
+
+    //---------------- VERTICAL GROUP
+    //with .-score
+    &.-score {
+      &.-all_top {
+        align-content: flex-start;
+      }
+      &.-all_middle {
+        align-content: center;
+      }
+      &.-all_between {
+        align-content: space-between;
+      }
+      &.-all_around {
+        align-content: space-around;
+      }
+      &.-all_stretch {
+        align-content: stretch;
+      }
+      &.-all_bottom {
+        align-content: flex-end;
+      }
+    }
+    //---------------- /VERTICAL GROUP
+
+    //---------------- SELF ALIGN
+    //without .-claviers
+    &:not(.-claviers) {
+      > .-in_top {
+        align-self: flex-start;
+      }
+      > .-in_middle {
+        align-self: center;
+      }
+      > .-in_bottom {
+        align-self: flex-end;
+      }
+      > .-in_stretch {
+        align-self: stretch;
+      }
+      > .-in_baseline {
+        align-self: baseline;
+      }
+    }
+
+    //with .-claviers
+    &.-claviers {
+      > .-in_top {
+        margin-bottom: auto;
+      }
+      > .-in_middle {
+        margin-bottom: auto;
+        margin-top: auto;
+      }
+      > .-in_bottom {
+        margin-top: auto;
+      }
+    }
+    //---------------- SELF ALIGN
+  }
+  /* /ALIGNS*/
+}

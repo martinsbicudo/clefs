@@ -1,0 +1,17 @@
+@mixin offset($columns) {
+  /*OFFSET*/
+  //without .-claviers
+  .clefs:not(.-claviers) {
+    @for $i from 1 through $columns {
+      //offset without .-reverse
+      &:not(.-reverse, .-revall) > .offset-#{$i}:matches(.clef, [class*="clef-"]) {
+        margin-left: calc((100% / #{$columns}) * #{$i});
+      }
+      //offset with .-reverse
+      &:matches(.-reverse, .-revall) > .offset-#{$i}:matches(.clef, [class*="clef-"]) {
+        margin-right: calc((100% / #{$columns}) * #{$i});
+      }
+    }
+  }
+  /* /OFFSET*/
+}

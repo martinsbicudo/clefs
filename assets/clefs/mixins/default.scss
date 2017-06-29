@@ -1,0 +1,5 @@
+//include/set components
+@mixin setComponent($component, $values) {
+  @if($component == 'reset') {@include reset();}
+  @if($component == 'grid') {@include grid($values);}
+}

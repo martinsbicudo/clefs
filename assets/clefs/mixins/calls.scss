@@ -1,0 +1,47 @@
+//CALLS
+@mixin call($component, $news: null) {
+  $values: map-get($components, $component);
+  //merge attributes
+  $values: mergeMaps($values, $news);
+  $enable: map-get($values, enable);
+  @if($enable) {
+    //get keys
+    $keys: map-keys($values);
+    //get enables
+    @if(hasKey($values, enables)) {
+      $values: overwriteInsideList(map-get($components, grid), $values, enables);
+    }
+
+    //validation values
+    @if not($news == null) {
+      @include validationComponent($component, $news, $keys);
+    }
+
+    //include/set components
+    @include setComponent($component, $values);
+  }
+}
+
+@mixin clefs($calls: null, $all: true) {
+  //validation
+  @if not($calls == null) {
+    @if not(checkType($calls, map)) {
+      @error "The first parameter must be in the map format!";
+    }
+  }
+  @if not(checkType($all, bool)) {@error "The second parameter must be in the boolean format!";}
+
+  $componentsList: map-keys($components);
+  @if not($all) {$componentsList: map-keys($calls);}
+  @each $component in $componentsList {
+
+    //check component exist
+    @if not(hasKey($components, $component)) {@error "Component #{$component} not found!";}
+    @if(hasKey($calls, $component)){
+      @include call($component, map-get($calls, $component));
+    }@else{
+      @include call($component);
+    }
+  }
+}
+// /CALLS

@@ -1,0 +1,21 @@
+
+@mixin auto($columns) {
+  /*AUTO WIDTHS*/
+  //modify the auto width .clef
+  .clefs {
+    //all with .-noauto
+    &.-auto_disable > .clef:not(.-noauto) {
+      flex: 0 0 auto;
+    }
+
+    //widths
+    @for $i from 1 through $columns {
+      &.-auto_#{$i}:not(.-claviers) > .clef:not(.-noauto) {
+        flex: 1 0 calc((100% / #{$columns} * #{$i}));
+        width: calc((100% / #{$columns} * #{$i}));
+        max-width: calc((100% / #{$columns} * #{$i}));
+      }
+    }
+  }
+  /* /AUTO WIDTHS*/
+}

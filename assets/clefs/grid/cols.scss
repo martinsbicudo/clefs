@@ -1,0 +1,38 @@
+@mixin cols($space, $columns) {
+  /*COLS*/
+  .clefs {
+    //.clef without auto width
+    > .clef.-noauto {
+      flex: 0 0 auto;
+    }
+
+    &:not(.-claviers) {
+      //widths .clef-*
+      @for $i from 1 through $columns {
+        > .clef-#{$i} {
+          flex: 1 0 calc(100% / #{$columns} * #{$i});
+          width: calc(100% / #{$columns} * #{$i});
+        }
+        > .clef-#{$i}:not(.clefs) {
+          max-width: calc(100% / #{$columns} * #{$i});
+        }
+        > .clef-#{$i}.clefs {
+          max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
+        }
+      }
+    }
+  }
+
+  //without space in .clef/.clef-* not .clefs
+  .clefs:not(.-nospace) > :matches(.clef, [class*="clef-"]) {
+      padding: $space / 2;
+  }
+
+  //auto width
+  .clefs:not([class*="-auto_"], .-auto_disable) {
+    > .clef:not(.-noauto) {
+      flex: 1 1 0;
+    }
+  }
+  /* /COLS*/
+}

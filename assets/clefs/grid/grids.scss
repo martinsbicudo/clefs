@@ -1,0 +1,71 @@
+@mixin grids($space) {
+  /*GRIDS*/
+  //without .-nospace
+  :not(.clefs) > .clefs:not(.-nospace),
+  .clefs:not(.-nospace):matches(.clef, [class*="clef-"]) {
+    margin-top: ($space / 2) * -1;
+    margin-right: ($space / 2) * -1;
+    margin-left: ($space / 2) * -1;
+  }
+
+  //with .-nospace
+  .clefs:not(.-nospace) > .clefs.-nospace {
+    padding: #{$space / 2};
+  }
+
+  //margin bottom between .clefs
+  :not(.clefs) > .clefs:not(:last-child) {
+    margin-bottom: #{$space / 2};
+  }
+
+  //margin bottom :last-child and .clef-*
+  :not(.clefs) > .clefs:last-child,
+  .clefs > .clefs:matches(.clef, [class*="clef-"]):not(.-nospace) {
+    margin-bottom: ($space / 2) * -1;
+  }
+
+  .clefs {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+
+    //.clefs auto width
+    &:not(.clef, [class*="clef-"], .-noauto) {
+        flex-basis: 100%;
+        min-width: 100%;
+    }
+
+    //.clefs no auto width
+    &:not(.clef, [class*="clef-"]).-noauto {
+      flex: 0 0 auto;
+    }
+
+    //reverse
+    .-reverse:not(.-score, .-claviers) {
+      flex-direction: row-reverse;
+    }
+
+    //score
+    &.-score {
+      flex-wrap: wrap;
+    }
+    //score reverse
+    &.-score.-reverse {
+      flex-wrap: wrap-reverse;
+    }
+    &.-score.-revall {
+      flex-wrap: wrap-reverse;
+      flex-direction: row-reverse;
+    }
+
+    //claviers
+    &.-claviers {
+      flex-direction: column;
+    }
+    //claviers reverse
+    &.-claviers.-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+  /* /GRIDS*/
+}

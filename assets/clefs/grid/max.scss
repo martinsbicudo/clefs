@@ -1,0 +1,12 @@
+@mixin max($columns) {
+  /*MAX WIDTH*/
+  .clefs {
+    //max width .clef/.clefs
+    @for $i from 1 through $columns {
+      > .max-#{($i * 100)}:matches(.clef, .clefs) {
+        max-width: calc(#{$i} * 100px);
+      }
+    }
+  }
+  /* /MAX WIDTH*/
+}

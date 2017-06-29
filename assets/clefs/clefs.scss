@@ -1,0 +1,13 @@
+/*
+ * Clefs ready to use!
+*/
+
+//IMPORT CLEFS-DEV
+    @import 'clefs-dev';
+
+//CALL COMPONENTS
+    @include clefs((
+      'grid': (
+        enable: true
+      )
+    ));

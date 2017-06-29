@@ -31,5 +31,10 @@
       line-height: 1.5;
       font-family: "Courier New", monospace;
     }
+
+    //colors
+    .tg { @extend .color-first; }
+    .at { color: #be9800; }
+    .vl { color: #007e99; }
   }
 /* /CLASSES*/

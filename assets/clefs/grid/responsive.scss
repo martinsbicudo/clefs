@@ -1,0 +1,6 @@
+@mixin responsive($values) {
+  /*RESPONSIVE*/
+  //call grids
+  @include grid-query($values);
+  /* /RESPONSIVE*/
+}

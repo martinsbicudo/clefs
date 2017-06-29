@@ -1,0 +1,20 @@
+@mixin order($columns) {
+  /*ORDER*/
+  .clefs {
+    //first
+    .-first {
+      order: -1;
+    }
+    //last
+    .-last {
+      order: $columns + 1;
+    }
+    //order to .clef-*
+    @for $i from 1 through $columns {
+      > .-order_#{$i} {
+        order: $i;
+      }
+    }
+  }
+  /* /ORDER*/
+}

@@ -1,0 +1,67 @@
+//FUNCTIONS
+
+//---------------- DEFAULT
+@function getValue($array, $index) {
+  @return map-get($array, $index);
+}
+
+@function getNext($list, $search) {
+  $i: index($list, $search);
+  $length: length($list);
+
+  @return if($i < $length, nth($list, $i + 1), null);
+}
+
+@function hasKey($list, $key) {
+  @return if($key and $list, map-has-key($list, $key), null);
+}
+
+@function mergeMaps($defaults, $news) {
+  @return
+    if($defaults and $news, map-merge($defaults, $news),
+      if($defaults, $defaults,
+        if($news, $news, null)
+      )
+    );
+}
+
+@function overwriteInsideList($list, $new, $name) {
+  $overwrite: map-get($new, $name);
+  $overwrite: (
+    #{$name}: (mergeMaps(map-get($list, $name), $overwrite))
+  );
+  @return mergeMaps($new, $overwrite);
+}
+
+@function checkType($value, $type) {
+  @return type-of($value) == $type;
+}
+
+@function getValueMap($map, $name) {
+  @each $value in map-keys($map) {
+    $valueParameter: map-get($map, $value);
+    $next: getNext(map-keys($map), $value);
+    @if(checkType($valueParameter, map)) {
+      $returnLoop: getValueMap($valueParameter, $name);
+      @if not($returnLoop == null) {
+        @return $returnLoop;
+      }@elseif($next == null){
+        @return null;
+      }
+    }@elseif(hasKey($map, $name)){
+      @return map-get($map, $name);
+    }@elseif($next == null){
+      @return null;
+    }
+  }
+}
+//---------------- /DEFAULT
+
+//---------------- GRID
+@function getNextQuery($name, $tags) {
+  $next-query: getNext($tags, $name);
+  @return $next-query;
+}
+//---------------- /GRID
+
+// /FUNCTIONS

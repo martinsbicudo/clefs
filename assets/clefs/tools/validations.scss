@@ -1,0 +1,34 @@
+//VALIDATIONS
+@mixin validationComponent($component, $news, $keys, $exception: null) {
+  $valuesComponent: map-get($components, $component);
+  $defaultsType: map-get($defaultsType, $component);
+  @each $new in map-keys($news) {
+    $valueComponent: getValueMap($valuesComponent, $new);
+    @if not($exception == null) {
+      $valueComponent: map-values($exception);
+      $valueComponent: nth($valueComponent, 1);
+    }
+    $typeComponent: type-of($valueComponent);
+    $valueParameter: map-get($news, $new);
+
+    //validations attributes
+    @if($exception == null) {
+      @if(index($keys, $new) == null and $valueComponent) {
+        @error "Attribute #{$new} is being used in the wrong place!";
+      }
+      @if ($valueComponent == null) {
+        @error "Attribute #{$new} not exist!";
+      }
+    }
+    @if not(checkType($valueParameter, $typeComponent)) {
+      @error "The parameter #{$new} must be in the #{$typeComponent} format!";
+    }
+    // /validations attributes
+
+    @if not(index($defaultsType, $new) == null) {$exception: map-get($valuesComponent, $new);}
+    @if(checkType($valueParameter, map)) {
+      @include validationComponent($component, $valueParameter, map-keys($valueComponent), $exception);
+    }
+  }
+}
+// /VALIDATIONS

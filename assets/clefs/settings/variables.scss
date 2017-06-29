@@ -1,0 +1,21 @@
+//OBJECTS
+  $objects: (
+    wrapper: 1170, //MAX-WIDTH WRAPPER
+    fontSize : 14
+  );
+
+//COLORS
+  $gray-color: #636363;
+  $lightgray-color: #d4d4d4;
+  $default-color: #909090;
+  $first-color: #ff9600;
+  $second-color: #006ac7;
+  $third-color: #2b5aa0;
+  $danger-color: #cc0000;
+  $info-color: #0066be;
+  $success-color: #17a400;
+  $warning-color: #eaab00;
+
+//CONFIG COLORS
+  $type-status: "default" "gray" "lightgray" "first" "second" "third" "danger" "info" "success" "warning";
+  $color-status: $default-color $gray-color $lightgray-color $first-color $second-color $third-color $danger-color $info-color $success-color $warning-color;

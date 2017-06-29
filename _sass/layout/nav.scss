@@ -16,16 +16,15 @@
   }
   .item[data-active="true"]:not(:hover) .name {
     @extend .color-first;
-    left: 5px;
+    transform: rotate(2deg);
     right: -5px;
+    left: 0;
   }
-  .item:not([data-active="true"]) .name {
-    opacity: 0;
+  .item:not([data-active="true"]):not(:hover) .name {
+    transform: translateX(-100%);
   }
   .item:hover .name {
     left: 50px;
-    box-shadow: .2em .2em .2em 0 rgba(0, 0, 0, .2);
-    opacity: 1;
   }
   .item:hover,
   .item[data-active="true"] {
@@ -38,7 +37,7 @@
   &,
   .link,
   .link .fa {
-    background: #040404;
+    background: #0e0e0e;
   }
   .link {
     display: block;
@@ -67,7 +66,6 @@
     line-height: 50px;
     position: absolute;
     top: 0;
-    left: -80px;
     z-index: -1;
     padding: 0 20px;
     transition: .1s;

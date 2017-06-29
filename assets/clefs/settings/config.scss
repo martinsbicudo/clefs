@@ -1,0 +1,39 @@
+//CONFIGS DEFAULT
+//---------------- DEFAULT VALIDATION TYPE
+$defaultsType: (
+  'grid': 'tags'
+);
+//---------------- /DEFAULT VALIDATION TYPE
+
+//---------------- RESET
+$reset: (
+  enable: true
+);
+//---------------- /RESET
+
+//---------------- GRID
+$grid: (
+  enable: true,
+  space: 1.5rem, //SPACE BETWEEN COLUMNS
+  columns: 12, //NUMBER OF COLUMNS
+  tags: ( //TAGS GRID
+    mobile: 368px,
+    plus: 568px,
+    tablet: 768px,
+    desktop: 1024px,
+    wide: 1280px
+  ),
+  enables:  ( //ENABLED PACKAGES
+    aligns: true,
+    auto: true,
+    cols: true,
+    debug: true,
+    grids: true,
+    max: true,
+    min: true,
+    offset: true,
+    order: true,
+    responsive: true
+  )
+);
+//---------------- /GRID

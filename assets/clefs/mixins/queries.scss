@@ -1,0 +1,43 @@
+//MIXINS QUERIES
+//min width
+@mixin query-min($name, $tags: map-get($grid, tags)) {
+  $min: map-get($tags, $name);
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+//max width
+@mixin query-max($name, $tags: map-get($grid, tags)) {
+  $max: map-get($tags, $name);
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+//between queries widths
+@mixin query-between($min, $max, $tags: map-get($grid, tags)) {
+  $min: map-get($tags, $min);
+  $max: map-get($tags, $max);
+
+  @media (min-width: $min) and (max-width: $max - 1px) {
+    @content;
+  }
+}
+
+//get query
+//reverse queries set TRUE
+@mixin get-query($name, $tags) {
+  $next: getNextQuery($name, map-keys($tags));
+
+  @if( $next ) {
+    @include query-between($name, $next, $tags) {
+      @content;
+    }
+  }@else{
+    @include query-min($name, $tags) {
+      @content;
+    }
+  }
+}
+// /MIXINS QUERIES

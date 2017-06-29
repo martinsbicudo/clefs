@@ -1,7 +1,7 @@
 <!-- header nav -->
-<nav class="nav clefs clef -noauto">
-  <ul class="list clefs -claviers -nospace">
-    <li class="item clef -noauto" data-active="{% if page.title == null %}true{% else %}false{% endif %}">
+<nav class="nav">
+  <ul class="list clefs clef -auto_disable -claviers -nospace">
+    <li class="item clef" data-active="{% if page.title == null %}true{% else %}false{% endif %}">
       <a class="link" href="/">
         <i class="fa fa-university"></i>
         <span class="name">
@@ -9,43 +9,35 @@
         </span>
       </a>
     </li>
-    <li class="item clef -noauto" data-active="{% if page.title == 'Documentation' %}true{% else %}false{% endif %}">
-      <a class="link" href="/grid">
+    <li class="item clef" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
+      <a class="link" href="/documentation">
         <i class="fa fa-book"></i>
         <span class="name">
           DOCUMENTATION
         </span>
       </a>
     </li>
-    <li class="item clef -noauto" data-active="{% if page.title == 'Grid' %}true{% else %}false{% endif %}">
-      <a class="link" href="/grid">
-        <i class="fa fa-th-large"></i>
+    <li class="item clef" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
+      <a class="link" href="/documentation">
+        <i class="fa fa-bug"></i>
         <span class="name">
-          GRID
+          DEBUG
         </span>
       </a>
     </li>
-    <li class="item clef -noauto" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
-      <a class="link" href="/components">
-        <i class="fa fa-archive"></i>
+    <li class="item clef" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
+      <a class="link" href="/devs">
+        <i class="fa fa-code"></i>
         <span class="name">
-          COMPONENTS
+          DEVS
         </span>
       </a>
     </li>
-    <li class="item clef -noauto" data-active="{% if page.title == 'About' %}true{% else %}false{% endif %}">
-      <a class="link" href="/about">
-        <i class="fa fa-info"></i>
+    <li class="item clef" data-active="false">
+      <a class="link" href="/how-use">
+        <i class="fa fa-coffee"></i>
         <span class="name">
-          ABOUT
-        </span>
-      </a>
-    </li>
-    <li class="item clef -noauto" data-active="false">
-      <a class="link" href="#">
-        <i class="fa fa-download"></i>
-        <span class="name">
-          DOWNLOAD
+          HOW TO USE
         </span>
       </a>
     </li>
