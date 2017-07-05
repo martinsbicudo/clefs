@@ -6,8 +6,21 @@
     @import 'clefs-dev';
 
 //CALL COMPONENTS
+    $tags: (
+      menina: 500px,
+      jose: 100px
+    );
     @include clefs((
       'grid': (
-        enable: true
+        enable: true,
+        tags: (
+          $tags
+        )
       )
     ));
+
+    @include query-between(jose, menina, $tags) {
+      .test {
+        color: red;
+      }
+    }

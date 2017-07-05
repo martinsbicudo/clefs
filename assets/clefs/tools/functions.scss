@@ -55,6 +55,65 @@
     }
   }
 }
+
+@function listRemove($list, $index) {
+  $newList: ();
+  @for $i from 1 through length($list) {
+    @if $i != $index {
+      $newList: append($newList, nth($list,$i), 'space');
+    }
+  }
+  @return $newList;
+}
+
+@function listRemoveRepeated($list) {
+  $newList: ();
+  @for $i from 1 through length($list) {
+    @if(index($newList, nth($list, $i)) == null) {
+      $newList: append($newList, nth($list,$i), 'space');
+    }
+  }
+  @return $newList;
+}
+
+@function mapSort($map, $values, $type: 'asc') {
+  $keys: map-keys($map);
+  $defaultValues: listRemoveRepeated($values);
+  $values: $defaultValues;
+  $length: length($values);
+  $newMap: ();
+  @each $value in $values {
+    $new: $value;
+    @if(index($values, $value) == null) {
+      $new: null;
+    }
+    @each $checkValue in $values {
+      @if($new == null) { $new: $checkValue; }
+
+      @if($type == 'asc') {
+        @if($new > $checkValue) {
+          $new: $checkValue;
+        }
+      }@elseif($type == 'desc') {
+        @if($new < $checkValue) {
+          $new: $checkValue;
+        }
+      }@else{
+        @error "Invalid sort type!";
+      }
+    }
+
+    $newIndex: index($defaultValues, $new);
+    $key: nth($keys, $newIndex);
+    $values: listRemove($values, index($values, $new));
+    @if(index(map-values($newMap), $new) == null) {
+      $add: ($key: $new);
+      $newMap: map-merge($newMap, $add);
+    }
+  }
+
+  @return $newMap;
+}
 //---------------- /DEFAULT
 
 //---------------- GRID

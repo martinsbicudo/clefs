@@ -14,27 +14,45 @@
   //code
   .code-box {
     display: flex;
-    background: whitesmoke;
-    border-radius: 5px;
     overflow: auto;
     max-height: 600px;
     max-width: 100%;
     word-wrap: normal;
+    position: relative;
 
+    .copy {
+      position: absolute;
+      background: #fff;
+      top: 1px;
+      right: 1px;
+      padding: 2px 5px;
+      border-bottom: 1px solid darken(whitesmoke, 5%);
+      border-left: 1px solid darken(whitesmoke, 5%);
+      color: gray;
+      cursor: pointer;
+    }
+    .copy:hover {
+      @extend .color-first;
+      &,
+      + code {
+        border-color: $first-color;
+      }
+    }
     code {
-      @extend .pd-20;
-      min-width: 100%;
+      background: whitesmoke;
+      width: 100%;
       display: block;
       font-size: 1em;
       overflow-x: auto;
       white-space: pre-wrap;
       line-height: 1.5;
-      font-family: "Courier New", monospace;
+      font-family: monospace;
+      border: 1px solid transparent;
     }
 
     //colors
     .tg { @extend .color-first; }
-    .at { color: #be9800; }
-    .vl { color: #007e99; }
+    .at { color: #b77800; }
+    .vl { color: #0076be; }
   }
 /* /CLASSES*/

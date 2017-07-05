@@ -26,6 +26,7 @@
 //grid query
 @mixin grid-query($values) {
   $tags: map-get($values, tags);
+  $tags: mapSort($tags, map-values($tags));
   @each $tag in map-keys($tags) {
     @include get-query($tag, $tags) {
       @include aply-grids($tag, $values);
