@@ -22,30 +22,32 @@
   .open-nav {
     background: #000;
     height: 50px;
+    width: 50px;
     position: fixed;
     top: 0;
     left: 0;
-    
+    z-index: 1;
+
     &:hover {
       //bars :hover
       .bars .bar,
-      .bars:before,
-      .bars:after {
+      .bar:before,
+      .bar:after {
         @extend .bg-first;
       }
     }
 
     &[data-active="true"] {
       .bars .bar {
-        opacity: 0;
+        background: transparent;
       }
-      .bars:before {
+      .bar:before {
         transform: rotate(45deg);
-        transform-origin: 5% 150%;
+        top: 0;
       }
-      .bars:after {
+      .bar:after {
         transform: rotate(-45deg);
-        transform-origin: 5% -40%;
+        bottom: 0;
       }
     }
   }
@@ -54,26 +56,29 @@
     cursor: pointer;
     padding: 15px;
     transition: .2s;
-    position: relative;
+    width: 100%;
 
     //bars
-    &:before,
-    &:after {
+    .bar:before,
+    .bar:after {
       content: "";
       position: absolute;
     }
 
-    &:before { top: 16px }
-    &:after { bottom: 16px }
+    .bar:before { top: 7px }
+    .bar:after { bottom: 7px }
 
     .bar {
+      position: relative;
       margin: 8px 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     //bar style
     .bar,
-    &:before,
-    &:after {
+    .bar:before,
+    .bar:after {
       background: #fff;
       display: block;
       height: 3px;

@@ -1,6 +1,7 @@
 ---
 layout: full
 title: 'Grid'
+nav: 'Documentation'
 subtitleFirst: [
   class: ".clefs",
   id: "#clefs"
@@ -21,7 +22,7 @@ description: A flexible grid, made with love and care
     </p>
   </div>
 </section>
-<section class="clefs -score pd-30 -pdt">
+<section class="content clefs -score">
   <div class="clefs -claviers clef-12 wide-6 desktop-6">
     <h2 class="page-subtitle clef">
       <a class="link" id="{{ page.subtitleFirst[1].id | downcase }}" href="{{ page.subtitleFirst[1].id | downcase }}">
@@ -31,26 +32,52 @@ description: A flexible grid, made with love and care
          {{ page.subtitleFirst[0].class | downcase }}
       </span>
     </h2>
+    <div class="clefs">
+      <div class="clef">
+        <div class="ex-first">
+          .clef
+        </div>
+      </div>
+      <div class="clef">
+        <div class="ex-danger">
+          .clef
+        </div>
+      </div>
+      <div class="clef">
+        <div class="ex-info">
+          .clef
+        </div>
+      </div>
+      <div class="clef">
+        <div class="ex-success">
+          .clef
+        </div>
+      </div>
+    </div>
     <div class="clef">
 <!-- CODE HERE -->
 
 <pre class="code-box">
   <button class="copy">Copy</button>
+  <div class="lines">
+    {% for i in (1..14) %}{{i}}
+    {% endfor %}
+  </div>
   <code data-lang="html">
-  <span class="tg">&lt;div <span class="at">class=<span class="vl">"clefs"</span></span>&gt;</span>
-    <span class="tg">&lt;div <span class="at">class=<span class="vl">"clef"</span></span>&gt;</span>
+  &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clefs"</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
-    <span class="tg">&lt;/div&gt;</span>
-    <span class="tg">&lt;div <span class="at">class=<span class="vl">"clef"</span></span>&gt;</span>
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
-    <span class="tg">&lt;/div&gt;</span>
-    <span class="tg">&lt;div <span class="at">class=<span class="vl">"clef"</span></span>&gt;</span>
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
-    <span class="tg">&lt;/div&gt;</span>
-    <span class="tg">&lt;div <span class="at">class=<span class="vl">"clef"</span></span>&gt;</span>
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
-    <span class="tg">&lt;/div&gt;</span>
-  <span class="tg">&lt;/div&gt;</span>
+    &lt;/<span class="tg">div</span>&gt;
+  &lt;/<span class="tg">div</span>&gt;
   </code>
 </pre>
 

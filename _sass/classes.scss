@@ -14,45 +14,55 @@
   //code
   .code-box {
     display: flex;
+    border-radius: 3px;
     overflow: auto;
     max-height: 600px;
     max-width: 100%;
     word-wrap: normal;
     position: relative;
+    line-height: 1.5;
 
     .copy {
+      @extend .font-khand;
+      background: #000;
+      color: #fff;
+      text-transform: uppercase;
       position: absolute;
-      background: #fff;
-      top: 1px;
-      right: 1px;
-      padding: 2px 5px;
-      border-bottom: 1px solid darken(whitesmoke, 5%);
-      border-left: 1px solid darken(whitesmoke, 5%);
-      color: gray;
+      top: 0;
+      right: 0;
+      padding: 2px 10px;
+
       cursor: pointer;
+      border-radius: 0 3px 0 3px;
     }
-    .copy:hover {
-      @extend .color-first;
-      &,
-      + code {
-        border-color: $first-color;
-      }
+    .copy:not(:hover) {
+      background: lighten(#0e0e0e, 5%);
+    }
+    .lines {
+      text-align: right;
+      white-space: pre-line;
+      padding: 0 7px;
+      background: #1b1b1b;
+      color: #bfabb3;
+      border-right: 1px solid #252525;
+      user-select: none;
     }
     code {
-      background: whitesmoke;
+      background: #0e0e0e;
       width: 100%;
       display: block;
       font-size: 1em;
       overflow-x: auto;
       white-space: pre-wrap;
-      line-height: 1.5;
       font-family: monospace;
       border: 1px solid transparent;
+      color: #bfabb3;
+      border-left: 1px solid #000;
     }
 
     //colors
     .tg { @extend .color-first; }
-    .at { color: #b77800; }
-    .vl { color: #0076be; }
+    .at { color: #c66d3b; }
+    .vl { color: #98c379; }
   }
 /* /CLASSES*/

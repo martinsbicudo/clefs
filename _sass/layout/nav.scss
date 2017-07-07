@@ -13,10 +13,10 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
   }
   .item[data-active="true"]:not(:hover) .name {
     @extend .color-first;
-    transform: rotate(2deg);
     right: -5px;
     left: 0;
   }
@@ -25,6 +25,7 @@
   }
   .item:hover .name {
     left: 50px;
+    box-shadow: .1em .1em .2em .1em rgba(0, 0, 0, 0.2);
   }
   .item:hover,
   .item[data-active="true"] {

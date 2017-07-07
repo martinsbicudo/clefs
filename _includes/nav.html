@@ -1,7 +1,7 @@
 <!-- header nav -->
 <nav class="nav">
   <ul class="list clefs clef -auto_disable -claviers -nospace">
-    <li class="item clef" data-active="{% if page.title == null %}true{% else %}false{% endif %}">
+    <li class="item clef" data-active="{% if page.nav == null %}true{% else %}false{% endif %}">
       <a class="link" href="/">
         <i class="fa fa-university"></i>
         <span class="name">
@@ -9,7 +9,7 @@
         </span>
       </a>
     </li>
-    <li class="item clef" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
+    <li class="item clef" data-active="{% if page.nav == 'Documentation' %}true{% else %}false{% endif %}">
       <a class="link" href="/documentation">
         <i class="fa fa-book"></i>
         <span class="name">
@@ -17,7 +17,7 @@
         </span>
       </a>
     </li>
-    <li class="item clef" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
+    <li class="item clef" data-active="{% if page.nav == 'Debug' %}true{% else %}false{% endif %}">
       <a class="link" href="/documentation">
         <i class="fa fa-bug"></i>
         <span class="name">
@@ -25,7 +25,7 @@
         </span>
       </a>
     </li>
-    <li class="item clef" data-active="{% if page.title == 'Components' %}true{% else %}false{% endif %}">
+    <li class="item clef" data-active="{% if page.nav == 'Devs' %}true{% else %}false{% endif %}">
       <a class="link" href="/devs">
         <i class="fa fa-code"></i>
         <span class="name">
@@ -33,7 +33,7 @@
         </span>
       </a>
     </li>
-    <li class="item clef" data-active="false">
+    <li class="item clef" data-active="{% if page.nav == 'How to use' %}true{% else %}false{% endif %}">
       <a class="link" href="/how-use">
         <i class="fa fa-coffee"></i>
         <span class="name">
