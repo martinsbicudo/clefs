@@ -13,49 +13,61 @@
 
   //code
   .code-box {
-    display: flex;
     border-radius: 3px;
-    overflow: auto;
-    max-height: 600px;
-    max-width: 100%;
-    word-wrap: normal;
     position: relative;
-    line-height: 1.5;
+    overflow: hidden;
 
-    .copy {
+    .pre {
+      overflow: auto;
+      display: flex;
+      min-width: 100%;
+      word-wrap: normal;
+      line-height: 1.5;
+
+      &[data-overflow="true"] {
+        max-height: 500px;
+      }
+    }
+    .options {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .code-btn {
       @extend .font-khand;
       background: #000;
       color: #fff;
       text-transform: uppercase;
-      position: absolute;
-      top: 0;
-      right: 0;
       padding: 2px 10px;
-
       cursor: pointer;
       border-radius: 0 3px 0 3px;
+      margin-left: 3px;
+
+      &:not(:hover) {
+        background: lighten(#0e0e0e, 5%);
+      }
     }
-    .copy:not(:hover) {
-      background: lighten(#0e0e0e, 5%);
+    .lines,
+    code {
+      font-size: .8em;
+      height: 100%;
     }
     .lines {
       text-align: right;
       white-space: pre-line;
-      padding: 0 7px;
+      padding: 0 5px 0 10px;
       background: #1b1b1b;
       color: #bfabb3;
       border-right: 1px solid #252525;
       user-select: none;
     }
     code {
+      flex: 1;
       background: #0e0e0e;
-      width: 100%;
       display: block;
-      font-size: 1em;
-      overflow-x: auto;
       white-space: pre-wrap;
       font-family: monospace;
-      border: 1px solid transparent;
       color: #bfabb3;
       border-left: 1px solid #000;
     }

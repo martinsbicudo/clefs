@@ -1,36 +1,56 @@
 //CONTENT
+  .page-top {
+    @extend .pd-20;
+    background: whitesmoke;
+  }
   .page-title {
     @extend .font-lobster;
     @extend .text-center;
     @extend .size-100;
-    @extend .color-first;
+    color: #0e0e0e;
   }
-  
+
   .page-description {
+    @extend .font-khand;
     @extend .text-center;
     @extend .size-20;
-    padding: 15px 0;
-    font-weight: bolder;
-    font-style: italic;
+    padding: 10px 0;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    .fa { color: #0e0e0e }
   }
-  
+
   .page-subtitle {
+    @extend .size-40;
+    @extend .font-khand;
+    font-weight: lighter;
+    color: #606060;
+    text-transform: uppercase;
+    border-bottom: 1px solid whitesmoke;
+  }
+
+  .explanation {
+    margin-top: 10px;
+    color: #606060;
+
+    &-title {
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+    ol.explanation-steps li { list-style: decimal }
+    ul.explanation-steps li { list-style: disc }
+    &-steps {
+      padding-left: 30px;
+    }
+
+    //class
     .class {
-      @extend .bg-first;
-      @extend .color-white;
-      @extend .size-14;
+      background: whitesmoke;
+      border-radius: 3px;
+      color: $first-color;
       padding: 2px 3px;
-      border-radius: 2px;
-    }
-    .link {
-      text-decoration: none;
-    }
-    .fa {
-      color: lighten(gray, 10%);
-      margin-right: 10px;
-      transition: .2s;
-      
-      &:hover { color: #000 }
+      font-size: .8em;
+      display: inline-block;
     }
   }
 // /CONTENT

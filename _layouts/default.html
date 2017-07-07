@@ -4,4 +4,11 @@ layout: default
 
 {% include head.html %}
 
-{{ content }}
+<main class="main">
+  {% include nav.html %}
+  <div class="page">
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </div>
+</main>

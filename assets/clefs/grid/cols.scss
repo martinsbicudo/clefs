@@ -30,8 +30,8 @@
 
   //auto width
   .clefs:not([class*="-auto_"], .-auto_disable) {
-    > .clef:not(.-noauto) {
-      flex: 1 1 0;
+    > :matches(.clef, .clefs):not(.-noauto) {
+      flex: 1 0 auto;
     }
   }
   /* /COLS*/

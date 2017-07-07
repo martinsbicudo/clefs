@@ -21,7 +21,8 @@
     left: 0;
   }
   .item:not([data-active="true"]):not(:hover) .name {
-    transform: translateX(-100%);
+    right: 0;
+    transform: translateX(-120%);
   }
   .item:hover .name {
     left: 50px;
@@ -44,7 +45,6 @@
     display: block;
     position: relative;
     text-decoration: none;
-    border-bottom: 1px solid lighten(#000, 5%);
   }
   .link,
   .link > .fa {

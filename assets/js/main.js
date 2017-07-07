@@ -20,9 +20,17 @@ $(function(){
     }
 
   $('.copy').on('click', function(){
-    var container = $('.copy + code');
+    var container = $(this).closest('.code-box').find('code');
     copyToClipboard(container);
     container.attr('id', 'copy');
     selectText('copy');
+  });
+
+  $('.see').on('click', function(){
+    var container = $(this).closest('.code-box').find('pre');
+    var overflow = container.attr('data-overflow');
+    container.attr('data-overflow', 'false');
+    if(overflow == 'false')
+      container.attr('data-overflow', 'true');
   });
 });

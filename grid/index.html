@@ -1,37 +1,28 @@
 ---
-layout: full
-title: 'Grid'
+layout: internal
+title: 'Documentation'
 nav: 'Documentation'
-subtitleFirst: [
-  class: ".clefs",
-  id: "#clefs"
+subtitle: [
+  COLUMNS,
+  CLAVIERS
 ]
-subtitleSecond: [
-  class: ".clefs.-claviers",
-  id: "#clefs-claviers"
-]
-description: A flexible grid, made with love and care
+description: Learn CLEFS like a music
 ---
 
-<section class="clefs">
-  <div class="clef">
-    <h1 class="page-title">{{ page.title | downcase }}</h1>
-    <p class="page-description">
-      {{ page.description }}
-      <i class="fa fa-heart"></i>
-    </p>
-  </div>
-</section>
 <section class="content clefs -score">
   <div class="clefs -claviers clef-12 wide-6 desktop-6">
-    <h2 class="page-subtitle clef">
-      <a class="link" id="{{ page.subtitleFirst[1].id | downcase }}" href="{{ page.subtitleFirst[1].id | downcase }}">
-        <i class="fa fa-link"></i>
-      </a>
-      <span class="class">
-         {{ page.subtitleFirst[0].class | downcase }}
-      </span>
-    </h2>
+    <div class="clef">
+      <h2 class="page-subtitle">
+           {{ page.subtitle[0] }}
+      </h2>
+      <div class="explanation">
+        <p class="explanation-title">Steps:</p>
+        <ol class="explanation-steps">
+          <li>Create a <span class="class">.clefs</span> box</li>
+          <li>Create as many <span class="class">.clef</span> elements</li>
+        </ol>
+      </div>
+    </div>
     <div class="clefs">
       <div class="clef">
         <div class="ex-first">
@@ -44,26 +35,29 @@ description: A flexible grid, made with love and care
         </div>
       </div>
       <div class="clef">
-        <div class="ex-info">
+        <div class="ex-success">
           .clef
         </div>
       </div>
       <div class="clef">
-        <div class="ex-success">
+        <div class="ex-second">
           .clef
         </div>
       </div>
     </div>
     <div class="clef">
 <!-- CODE HERE -->
-
-<pre class="code-box">
-  <button class="copy">Copy</button>
-  <div class="lines">
-    {% for i in (1..14) %}{{i}}
-    {% endfor %}
-  </div>
-  <code data-lang="html">
+<div class="code-box">
+<div class="options">
+  <button class="code-btn see">See All</button>
+  <button class="code-btn copy">Copy</button>
+</div>
+<pre class="pre" data-overflow="true">
+<div class="lines">
+{% for i in (1..14) %}{{i}}
+{% endfor %}
+</div>
+<code data-lang="html">
   &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clefs"</span>&gt;
     &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
@@ -77,21 +71,12 @@ description: A flexible grid, made with love and care
     &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
     &lt;/<span class="tg">div</span>&gt;
-  &lt;/<span class="tg">div</span>&gt;
-  </code>
+  &lt;/<span class="tg">div</span>&gt;<br>
+</code>
 </pre>
+</div>
 
 <!-- //END CODE HERE -->
     </div>
-  </div>
-  <div class="clef-12 wide-6 desktop-6">
-    <h2 class="page-subtitle">
-      <a class="link" id="{{ page.subtitleSecond[1].id | downcase }}" href="{{ page.subtitleSecond[1].id | downcase }}">
-        <i class="fa fa-link"></i>
-      </a>
-      <span class="class">
-         {{ page.subtitleSecond[0].class | downcase }}
-      </span>
-    </h2>
   </div>
 </section>
