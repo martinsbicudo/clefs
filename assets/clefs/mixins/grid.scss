@@ -1,6 +1,62 @@
 //MIXINS GRID
-//aply grids
-@mixin aply-grids($tag, $values) {
+//grids class
+@mixin first-content($tag, $i, $only) {
+  @if($only) {
+    > .clefs:not(.clef, [class*="clef-"], .-only).#{$tag}-#{$i} {
+      @content;
+    }
+  }@else{
+    > .clefs:not(.clef, [class*="clef-"]).-only.#{$tag}-#{$i} {
+      @content;
+    }
+  }
+}
+@mixin second-content($tag, $i, $only) {
+  @if($only) {
+    > :not(.clefs, .-only):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
+    > .clefs:not(.clef, [class*="clef-"], .-only).#{$tag}-#{$i} {
+      @content;
+    }
+  }@else{
+    > :not(.clefs):matches(.clef, [class*="clef-"]).-only.#{$tag}-#{$i},
+    > .clefs:not(.clef, [class*="clef-"]).-only.#{$tag}-#{$i} {
+      @content;
+    }
+  }
+}
+@mixin third-content($tag, $i, $only) {
+  @if($only) {
+    > .clefs:not(.-only):matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+      @content;
+    }
+  }@else{
+    > .clefs:matches(.clef, [class*="clef-"]).-only.#{$tag}-#{$i} {
+      @content;
+    }
+  }
+}
+
+//grid style only
+@mixin grid-style($tag, $i, $columns, $space, $only) {
+  //------------ CONFLICT CORRECTION
+  //conflict correction with auto width .clefs
+  @include first-content($tag, $i, $only){
+    min-width: auto !important;
+  }
+  //------------ /CONFLICT CORRECTION
+
+  @include second-content($tag, $i, $only) {
+    flex: 1 0 calc((100% / #{$columns} * #{$i}));
+    max-width: calc((100% / #{$columns} * #{$i}));
+  }
+  @include third-content($tag, $i, $only){
+    flex: 1 0 calc((100% / #{$columns} * #{$i}) + #{$space});
+    max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
+  }
+}
+
+//grid queries
+@mixin grid-query($tag, $values, $only: false) {
   $columns: map-get($values, columns);
   $space: map-get($values, space);
   $tags: map-get($values, tags);
@@ -9,33 +65,42 @@
   .clefs:not(.-claviers) {
     //widths specifics
     @for $i from 1 through $columns {
-      //------------ CONFLICT CORRECTION
-      //conflict correction with auto width .clefs
-      > .clefs:not(.clef, [class*="clef-"]).#{$tag}-#{$i} {
-        min-width: auto !important;
-      }
-      //------------ /CONFLICT CORRECTION
-
-      > :not(.clefs):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
-      > .clefs:not(.clef, [class*="clef-"]).#{$tag}-#{$i} {
-        flex: 1 0 calc((100% / #{$columns} * #{$i}));
-        max-width: calc((100% / #{$columns} * #{$i}));
-      }
-      > .clefs:matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
-        flex: 1 0 calc((100% / #{$columns} * #{$i}) + #{$space});
-        max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
-      }
+      @include grid-style($tag, $i, $columns, $space, $only);
     }
   }
 }
 
-//grid query
-@mixin grid-query($values) {
+//get queries between
+@mixin grids-between($name, $tags) {
+  $next: getNextQuery($name, map-keys($tags));
+
+  @if( $next ) {
+    @include query-between($name, $next, $tags) {
+      @content;
+    }
+  }@else{
+    @include query-min($name, $tags) {
+      @content;
+    }
+  }
+}
+
+@mixin grids-min($name, $tags) {
+  @include query-min($name, $tags) {
+    @content;
+  }
+}
+
+//aply grids
+@mixin aply-grids($values) {
   $tags: map-get($values, tags);
   $tags: mapSort($tags, map-values($tags));
   @each $tag in map-keys($tags) {
-    @include get-query($tag, $tags) {
-      @include aply-grids($tag, $values);
+    @include grids-between($tag, $tags) {
+      @include grid-query($tag, $values);
+    }
+    @include grids-min($tag, $tags) {
+      @include grid-query($tag, $values, true);
     }
   }
 }

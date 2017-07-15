@@ -24,20 +24,4 @@
     @content;
   }
 }
-
-//get query
-//reverse queries set TRUE
-@mixin get-query($name, $tags) {
-  $next: getNextQuery($name, map-keys($tags));
-
-  @if( $next ) {
-    @include query-between($name, $next, $tags) {
-      @content;
-    }
-  }@else{
-    @include query-min($name, $tags) {
-      @content;
-    }
-  }
-}
 // /MIXINS QUERIES
