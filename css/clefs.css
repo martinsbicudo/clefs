@@ -100,60 +100,60 @@ textarea {
       -ms-flex-align: stretch;
           align-items: stretch; }
 
-.clefs.-score.-all_top {
+.clefs.-score.-top {
   -ms-flex-line-pack: start;
       align-content: flex-start; }
 
-.clefs.-score.-all_middle {
+.clefs.-score.-middle {
   -ms-flex-line-pack: center;
       align-content: center; }
 
-.clefs.-score.-all_between {
+.clefs.-score.-between {
   -ms-flex-line-pack: justify;
       align-content: space-between; }
 
-.clefs.-score.-all_around {
+.clefs.-score.-around {
   -ms-flex-line-pack: distribute;
       align-content: space-around; }
 
-.clefs.-score.-all_stretch {
+.clefs.-score.-stretch {
   -ms-flex-line-pack: stretch;
       align-content: stretch; }
 
-.clefs.-score.-all_bottom {
+.clefs.-score.-bottom {
   -ms-flex-line-pack: end;
       align-content: flex-end; }
 
-.clefs:not(.-claviers) > .-in_top {
+.clefs:not(.-claviers) > .-intop {
   -ms-flex-item-align: start;
       align-self: flex-start; }
 
-.clefs:not(.-claviers) > .-in_middle {
+.clefs:not(.-claviers) > .-inmiddle {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center; }
 
-.clefs:not(.-claviers) > .-in_bottom {
+.clefs:not(.-claviers) > .-inbottom {
   -ms-flex-item-align: end;
       align-self: flex-end; }
 
-.clefs:not(.-claviers) > .-in_stretch {
+.clefs:not(.-claviers) > .-instretch {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch; }
 
-.clefs:not(.-claviers) > .-in_baseline {
+.clefs:not(.-claviers) > .-inbaseline {
   -ms-flex-item-align: baseline;
       align-self: baseline; }
 
-.clefs.-claviers > .-in_top {
+.clefs.-claviers > .-intop {
   margin-bottom: auto; }
 
-.clefs.-claviers > .-in_middle {
+.clefs.-claviers > .-inmiddle {
   margin-bottom: auto;
   margin-top: auto; }
 
-.clefs.-claviers > .-in_bottom {
+.clefs.-claviers > .-inbottom {
   margin-top: auto; }
 
 /* /ALIGNS*/
@@ -733,8 +733,8 @@ textarea {
     max-width: 8.33333%; }
   .clefs > .clefs.clef.mobile-1, .clefs > .clefs[class*="clef-"].mobile-1 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 8.33333%;
-            flex: 1 0 8.33333%;
+        -ms-flex: 1 0 calc(8.33333% + 1.5rem);
+            flex: 1 0 calc(8.33333% + 1.5rem);
     max-width: calc(8.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-2 {
     min-width: 16.66667%; }
@@ -745,8 +745,8 @@ textarea {
     max-width: 16.66667%; }
   .clefs > .clefs.clef.mobile-2, .clefs > .clefs[class*="clef-"].mobile-2 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 16.66667%;
-            flex: 1 0 16.66667%;
+        -ms-flex: 1 0 calc(16.66667% + 1.5rem);
+            flex: 1 0 calc(16.66667% + 1.5rem);
     max-width: calc(16.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-3 {
     min-width: 25%; }
@@ -757,8 +757,8 @@ textarea {
     max-width: 25%; }
   .clefs > .clefs.clef.mobile-3, .clefs > .clefs[class*="clef-"].mobile-3 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
+        -ms-flex: 1 0 calc(25% + 1.5rem);
+            flex: 1 0 calc(25% + 1.5rem);
     max-width: calc(25% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-4 {
     min-width: 33.33333%; }
@@ -769,8 +769,8 @@ textarea {
     max-width: 33.33333%; }
   .clefs > .clefs.clef.mobile-4, .clefs > .clefs[class*="clef-"].mobile-4 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%;
+        -ms-flex: 1 0 calc(33.33333% + 1.5rem);
+            flex: 1 0 calc(33.33333% + 1.5rem);
     max-width: calc(33.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-5 {
     min-width: 41.66667%; }
@@ -781,8 +781,8 @@ textarea {
     max-width: 41.66667%; }
   .clefs > .clefs.clef.mobile-5, .clefs > .clefs[class*="clef-"].mobile-5 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 41.66667%;
-            flex: 1 0 41.66667%;
+        -ms-flex: 1 0 calc(41.66667% + 1.5rem);
+            flex: 1 0 calc(41.66667% + 1.5rem);
     max-width: calc(41.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-6 {
     min-width: 50%; }
@@ -793,8 +793,8 @@ textarea {
     max-width: 50%; }
   .clefs > .clefs.clef.mobile-6, .clefs > .clefs[class*="clef-"].mobile-6 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 calc(50% + 1.5rem);
+            flex: 1 0 calc(50% + 1.5rem);
     max-width: calc(50% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-7 {
     min-width: 58.33333%; }
@@ -805,8 +805,8 @@ textarea {
     max-width: 58.33333%; }
   .clefs > .clefs.clef.mobile-7, .clefs > .clefs[class*="clef-"].mobile-7 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 58.33333%;
-            flex: 1 0 58.33333%;
+        -ms-flex: 1 0 calc(58.33333% + 1.5rem);
+            flex: 1 0 calc(58.33333% + 1.5rem);
     max-width: calc(58.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-8 {
     min-width: 66.66667%; }
@@ -817,8 +817,8 @@ textarea {
     max-width: 66.66667%; }
   .clefs > .clefs.clef.mobile-8, .clefs > .clefs[class*="clef-"].mobile-8 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 66.66667%;
-            flex: 1 0 66.66667%;
+        -ms-flex: 1 0 calc(66.66667% + 1.5rem);
+            flex: 1 0 calc(66.66667% + 1.5rem);
     max-width: calc(66.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-9 {
     min-width: 75%; }
@@ -829,8 +829,8 @@ textarea {
     max-width: 75%; }
   .clefs > .clefs.clef.mobile-9, .clefs > .clefs[class*="clef-"].mobile-9 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 75%;
-            flex: 1 0 75%;
+        -ms-flex: 1 0 calc(75% + 1.5rem);
+            flex: 1 0 calc(75% + 1.5rem);
     max-width: calc(75% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-10 {
     min-width: 83.33333%; }
@@ -841,8 +841,8 @@ textarea {
     max-width: 83.33333%; }
   .clefs > .clefs.clef.mobile-10, .clefs > .clefs[class*="clef-"].mobile-10 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 83.33333%;
-            flex: 1 0 83.33333%;
+        -ms-flex: 1 0 calc(83.33333% + 1.5rem);
+            flex: 1 0 calc(83.33333% + 1.5rem);
     max-width: calc(83.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-11 {
     min-width: 91.66667%; }
@@ -853,8 +853,8 @@ textarea {
     max-width: 91.66667%; }
   .clefs > .clefs.clef.mobile-11, .clefs > .clefs[class*="clef-"].mobile-11 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 91.66667%;
-            flex: 1 0 91.66667%;
+        -ms-flex: 1 0 calc(91.66667% + 1.5rem);
+            flex: 1 0 calc(91.66667% + 1.5rem);
     max-width: calc(91.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).mobile-12 {
     min-width: 100%; }
@@ -865,8 +865,8 @@ textarea {
     max-width: 100%; }
   .clefs > .clefs.clef.mobile-12, .clefs > .clefs[class*="clef-"].mobile-12 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+        -ms-flex: 1 0 calc(100% + 1.5rem);
+            flex: 1 0 calc(100% + 1.5rem);
     max-width: calc(100% + 1.5rem); } }
 
 @media (min-width: 568px) and (max-width: 767px) {
@@ -879,8 +879,8 @@ textarea {
     max-width: 8.33333%; }
   .clefs > .clefs.clef.plus-1, .clefs > .clefs[class*="clef-"].plus-1 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 8.33333%;
-            flex: 1 0 8.33333%;
+        -ms-flex: 1 0 calc(8.33333% + 1.5rem);
+            flex: 1 0 calc(8.33333% + 1.5rem);
     max-width: calc(8.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-2 {
     min-width: 16.66667%; }
@@ -891,8 +891,8 @@ textarea {
     max-width: 16.66667%; }
   .clefs > .clefs.clef.plus-2, .clefs > .clefs[class*="clef-"].plus-2 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 16.66667%;
-            flex: 1 0 16.66667%;
+        -ms-flex: 1 0 calc(16.66667% + 1.5rem);
+            flex: 1 0 calc(16.66667% + 1.5rem);
     max-width: calc(16.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-3 {
     min-width: 25%; }
@@ -903,8 +903,8 @@ textarea {
     max-width: 25%; }
   .clefs > .clefs.clef.plus-3, .clefs > .clefs[class*="clef-"].plus-3 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
+        -ms-flex: 1 0 calc(25% + 1.5rem);
+            flex: 1 0 calc(25% + 1.5rem);
     max-width: calc(25% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-4 {
     min-width: 33.33333%; }
@@ -915,8 +915,8 @@ textarea {
     max-width: 33.33333%; }
   .clefs > .clefs.clef.plus-4, .clefs > .clefs[class*="clef-"].plus-4 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%;
+        -ms-flex: 1 0 calc(33.33333% + 1.5rem);
+            flex: 1 0 calc(33.33333% + 1.5rem);
     max-width: calc(33.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-5 {
     min-width: 41.66667%; }
@@ -927,8 +927,8 @@ textarea {
     max-width: 41.66667%; }
   .clefs > .clefs.clef.plus-5, .clefs > .clefs[class*="clef-"].plus-5 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 41.66667%;
-            flex: 1 0 41.66667%;
+        -ms-flex: 1 0 calc(41.66667% + 1.5rem);
+            flex: 1 0 calc(41.66667% + 1.5rem);
     max-width: calc(41.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-6 {
     min-width: 50%; }
@@ -939,8 +939,8 @@ textarea {
     max-width: 50%; }
   .clefs > .clefs.clef.plus-6, .clefs > .clefs[class*="clef-"].plus-6 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 calc(50% + 1.5rem);
+            flex: 1 0 calc(50% + 1.5rem);
     max-width: calc(50% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-7 {
     min-width: 58.33333%; }
@@ -951,8 +951,8 @@ textarea {
     max-width: 58.33333%; }
   .clefs > .clefs.clef.plus-7, .clefs > .clefs[class*="clef-"].plus-7 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 58.33333%;
-            flex: 1 0 58.33333%;
+        -ms-flex: 1 0 calc(58.33333% + 1.5rem);
+            flex: 1 0 calc(58.33333% + 1.5rem);
     max-width: calc(58.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-8 {
     min-width: 66.66667%; }
@@ -963,8 +963,8 @@ textarea {
     max-width: 66.66667%; }
   .clefs > .clefs.clef.plus-8, .clefs > .clefs[class*="clef-"].plus-8 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 66.66667%;
-            flex: 1 0 66.66667%;
+        -ms-flex: 1 0 calc(66.66667% + 1.5rem);
+            flex: 1 0 calc(66.66667% + 1.5rem);
     max-width: calc(66.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-9 {
     min-width: 75%; }
@@ -975,8 +975,8 @@ textarea {
     max-width: 75%; }
   .clefs > .clefs.clef.plus-9, .clefs > .clefs[class*="clef-"].plus-9 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 75%;
-            flex: 1 0 75%;
+        -ms-flex: 1 0 calc(75% + 1.5rem);
+            flex: 1 0 calc(75% + 1.5rem);
     max-width: calc(75% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-10 {
     min-width: 83.33333%; }
@@ -987,8 +987,8 @@ textarea {
     max-width: 83.33333%; }
   .clefs > .clefs.clef.plus-10, .clefs > .clefs[class*="clef-"].plus-10 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 83.33333%;
-            flex: 1 0 83.33333%;
+        -ms-flex: 1 0 calc(83.33333% + 1.5rem);
+            flex: 1 0 calc(83.33333% + 1.5rem);
     max-width: calc(83.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-11 {
     min-width: 91.66667%; }
@@ -999,8 +999,8 @@ textarea {
     max-width: 91.66667%; }
   .clefs > .clefs.clef.plus-11, .clefs > .clefs[class*="clef-"].plus-11 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 91.66667%;
-            flex: 1 0 91.66667%;
+        -ms-flex: 1 0 calc(91.66667% + 1.5rem);
+            flex: 1 0 calc(91.66667% + 1.5rem);
     max-width: calc(91.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).plus-12 {
     min-width: 100%; }
@@ -1011,8 +1011,8 @@ textarea {
     max-width: 100%; }
   .clefs > .clefs.clef.plus-12, .clefs > .clefs[class*="clef-"].plus-12 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+        -ms-flex: 1 0 calc(100% + 1.5rem);
+            flex: 1 0 calc(100% + 1.5rem);
     max-width: calc(100% + 1.5rem); } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1025,8 +1025,8 @@ textarea {
     max-width: 8.33333%; }
   .clefs > .clefs.clef.tablet-1, .clefs > .clefs[class*="clef-"].tablet-1 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 8.33333%;
-            flex: 1 0 8.33333%;
+        -ms-flex: 1 0 calc(8.33333% + 1.5rem);
+            flex: 1 0 calc(8.33333% + 1.5rem);
     max-width: calc(8.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-2 {
     min-width: 16.66667%; }
@@ -1037,8 +1037,8 @@ textarea {
     max-width: 16.66667%; }
   .clefs > .clefs.clef.tablet-2, .clefs > .clefs[class*="clef-"].tablet-2 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 16.66667%;
-            flex: 1 0 16.66667%;
+        -ms-flex: 1 0 calc(16.66667% + 1.5rem);
+            flex: 1 0 calc(16.66667% + 1.5rem);
     max-width: calc(16.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-3 {
     min-width: 25%; }
@@ -1049,8 +1049,8 @@ textarea {
     max-width: 25%; }
   .clefs > .clefs.clef.tablet-3, .clefs > .clefs[class*="clef-"].tablet-3 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
+        -ms-flex: 1 0 calc(25% + 1.5rem);
+            flex: 1 0 calc(25% + 1.5rem);
     max-width: calc(25% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-4 {
     min-width: 33.33333%; }
@@ -1061,8 +1061,8 @@ textarea {
     max-width: 33.33333%; }
   .clefs > .clefs.clef.tablet-4, .clefs > .clefs[class*="clef-"].tablet-4 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%;
+        -ms-flex: 1 0 calc(33.33333% + 1.5rem);
+            flex: 1 0 calc(33.33333% + 1.5rem);
     max-width: calc(33.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-5 {
     min-width: 41.66667%; }
@@ -1073,8 +1073,8 @@ textarea {
     max-width: 41.66667%; }
   .clefs > .clefs.clef.tablet-5, .clefs > .clefs[class*="clef-"].tablet-5 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 41.66667%;
-            flex: 1 0 41.66667%;
+        -ms-flex: 1 0 calc(41.66667% + 1.5rem);
+            flex: 1 0 calc(41.66667% + 1.5rem);
     max-width: calc(41.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-6 {
     min-width: 50%; }
@@ -1085,8 +1085,8 @@ textarea {
     max-width: 50%; }
   .clefs > .clefs.clef.tablet-6, .clefs > .clefs[class*="clef-"].tablet-6 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 calc(50% + 1.5rem);
+            flex: 1 0 calc(50% + 1.5rem);
     max-width: calc(50% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-7 {
     min-width: 58.33333%; }
@@ -1097,8 +1097,8 @@ textarea {
     max-width: 58.33333%; }
   .clefs > .clefs.clef.tablet-7, .clefs > .clefs[class*="clef-"].tablet-7 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 58.33333%;
-            flex: 1 0 58.33333%;
+        -ms-flex: 1 0 calc(58.33333% + 1.5rem);
+            flex: 1 0 calc(58.33333% + 1.5rem);
     max-width: calc(58.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-8 {
     min-width: 66.66667%; }
@@ -1109,8 +1109,8 @@ textarea {
     max-width: 66.66667%; }
   .clefs > .clefs.clef.tablet-8, .clefs > .clefs[class*="clef-"].tablet-8 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 66.66667%;
-            flex: 1 0 66.66667%;
+        -ms-flex: 1 0 calc(66.66667% + 1.5rem);
+            flex: 1 0 calc(66.66667% + 1.5rem);
     max-width: calc(66.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-9 {
     min-width: 75%; }
@@ -1121,8 +1121,8 @@ textarea {
     max-width: 75%; }
   .clefs > .clefs.clef.tablet-9, .clefs > .clefs[class*="clef-"].tablet-9 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 75%;
-            flex: 1 0 75%;
+        -ms-flex: 1 0 calc(75% + 1.5rem);
+            flex: 1 0 calc(75% + 1.5rem);
     max-width: calc(75% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-10 {
     min-width: 83.33333%; }
@@ -1133,8 +1133,8 @@ textarea {
     max-width: 83.33333%; }
   .clefs > .clefs.clef.tablet-10, .clefs > .clefs[class*="clef-"].tablet-10 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 83.33333%;
-            flex: 1 0 83.33333%;
+        -ms-flex: 1 0 calc(83.33333% + 1.5rem);
+            flex: 1 0 calc(83.33333% + 1.5rem);
     max-width: calc(83.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-11 {
     min-width: 91.66667%; }
@@ -1145,8 +1145,8 @@ textarea {
     max-width: 91.66667%; }
   .clefs > .clefs.clef.tablet-11, .clefs > .clefs[class*="clef-"].tablet-11 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 91.66667%;
-            flex: 1 0 91.66667%;
+        -ms-flex: 1 0 calc(91.66667% + 1.5rem);
+            flex: 1 0 calc(91.66667% + 1.5rem);
     max-width: calc(91.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).tablet-12 {
     min-width: 100%; }
@@ -1157,8 +1157,8 @@ textarea {
     max-width: 100%; }
   .clefs > .clefs.clef.tablet-12, .clefs > .clefs[class*="clef-"].tablet-12 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+        -ms-flex: 1 0 calc(100% + 1.5rem);
+            flex: 1 0 calc(100% + 1.5rem);
     max-width: calc(100% + 1.5rem); } }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -1171,8 +1171,8 @@ textarea {
     max-width: 8.33333%; }
   .clefs > .clefs.clef.desktop-1, .clefs > .clefs[class*="clef-"].desktop-1 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 8.33333%;
-            flex: 1 0 8.33333%;
+        -ms-flex: 1 0 calc(8.33333% + 1.5rem);
+            flex: 1 0 calc(8.33333% + 1.5rem);
     max-width: calc(8.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-2 {
     min-width: 16.66667%; }
@@ -1183,8 +1183,8 @@ textarea {
     max-width: 16.66667%; }
   .clefs > .clefs.clef.desktop-2, .clefs > .clefs[class*="clef-"].desktop-2 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 16.66667%;
-            flex: 1 0 16.66667%;
+        -ms-flex: 1 0 calc(16.66667% + 1.5rem);
+            flex: 1 0 calc(16.66667% + 1.5rem);
     max-width: calc(16.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-3 {
     min-width: 25%; }
@@ -1195,8 +1195,8 @@ textarea {
     max-width: 25%; }
   .clefs > .clefs.clef.desktop-3, .clefs > .clefs[class*="clef-"].desktop-3 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
+        -ms-flex: 1 0 calc(25% + 1.5rem);
+            flex: 1 0 calc(25% + 1.5rem);
     max-width: calc(25% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-4 {
     min-width: 33.33333%; }
@@ -1207,8 +1207,8 @@ textarea {
     max-width: 33.33333%; }
   .clefs > .clefs.clef.desktop-4, .clefs > .clefs[class*="clef-"].desktop-4 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%;
+        -ms-flex: 1 0 calc(33.33333% + 1.5rem);
+            flex: 1 0 calc(33.33333% + 1.5rem);
     max-width: calc(33.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-5 {
     min-width: 41.66667%; }
@@ -1219,8 +1219,8 @@ textarea {
     max-width: 41.66667%; }
   .clefs > .clefs.clef.desktop-5, .clefs > .clefs[class*="clef-"].desktop-5 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 41.66667%;
-            flex: 1 0 41.66667%;
+        -ms-flex: 1 0 calc(41.66667% + 1.5rem);
+            flex: 1 0 calc(41.66667% + 1.5rem);
     max-width: calc(41.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-6 {
     min-width: 50%; }
@@ -1231,8 +1231,8 @@ textarea {
     max-width: 50%; }
   .clefs > .clefs.clef.desktop-6, .clefs > .clefs[class*="clef-"].desktop-6 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 calc(50% + 1.5rem);
+            flex: 1 0 calc(50% + 1.5rem);
     max-width: calc(50% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-7 {
     min-width: 58.33333%; }
@@ -1243,8 +1243,8 @@ textarea {
     max-width: 58.33333%; }
   .clefs > .clefs.clef.desktop-7, .clefs > .clefs[class*="clef-"].desktop-7 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 58.33333%;
-            flex: 1 0 58.33333%;
+        -ms-flex: 1 0 calc(58.33333% + 1.5rem);
+            flex: 1 0 calc(58.33333% + 1.5rem);
     max-width: calc(58.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-8 {
     min-width: 66.66667%; }
@@ -1255,8 +1255,8 @@ textarea {
     max-width: 66.66667%; }
   .clefs > .clefs.clef.desktop-8, .clefs > .clefs[class*="clef-"].desktop-8 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 66.66667%;
-            flex: 1 0 66.66667%;
+        -ms-flex: 1 0 calc(66.66667% + 1.5rem);
+            flex: 1 0 calc(66.66667% + 1.5rem);
     max-width: calc(66.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-9 {
     min-width: 75%; }
@@ -1267,8 +1267,8 @@ textarea {
     max-width: 75%; }
   .clefs > .clefs.clef.desktop-9, .clefs > .clefs[class*="clef-"].desktop-9 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 75%;
-            flex: 1 0 75%;
+        -ms-flex: 1 0 calc(75% + 1.5rem);
+            flex: 1 0 calc(75% + 1.5rem);
     max-width: calc(75% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-10 {
     min-width: 83.33333%; }
@@ -1279,8 +1279,8 @@ textarea {
     max-width: 83.33333%; }
   .clefs > .clefs.clef.desktop-10, .clefs > .clefs[class*="clef-"].desktop-10 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 83.33333%;
-            flex: 1 0 83.33333%;
+        -ms-flex: 1 0 calc(83.33333% + 1.5rem);
+            flex: 1 0 calc(83.33333% + 1.5rem);
     max-width: calc(83.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-11 {
     min-width: 91.66667%; }
@@ -1291,8 +1291,8 @@ textarea {
     max-width: 91.66667%; }
   .clefs > .clefs.clef.desktop-11, .clefs > .clefs[class*="clef-"].desktop-11 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 91.66667%;
-            flex: 1 0 91.66667%;
+        -ms-flex: 1 0 calc(91.66667% + 1.5rem);
+            flex: 1 0 calc(91.66667% + 1.5rem);
     max-width: calc(91.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).desktop-12 {
     min-width: 100%; }
@@ -1303,8 +1303,8 @@ textarea {
     max-width: 100%; }
   .clefs > .clefs.clef.desktop-12, .clefs > .clefs[class*="clef-"].desktop-12 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+        -ms-flex: 1 0 calc(100% + 1.5rem);
+            flex: 1 0 calc(100% + 1.5rem);
     max-width: calc(100% + 1.5rem); } }
 
 @media (min-width: 1280px) {
@@ -1317,8 +1317,8 @@ textarea {
     max-width: 8.33333%; }
   .clefs > .clefs.clef.wide-1, .clefs > .clefs[class*="clef-"].wide-1 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 8.33333%;
-            flex: 1 0 8.33333%;
+        -ms-flex: 1 0 calc(8.33333% + 1.5rem);
+            flex: 1 0 calc(8.33333% + 1.5rem);
     max-width: calc(8.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-2 {
     min-width: 16.66667%; }
@@ -1329,8 +1329,8 @@ textarea {
     max-width: 16.66667%; }
   .clefs > .clefs.clef.wide-2, .clefs > .clefs[class*="clef-"].wide-2 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 16.66667%;
-            flex: 1 0 16.66667%;
+        -ms-flex: 1 0 calc(16.66667% + 1.5rem);
+            flex: 1 0 calc(16.66667% + 1.5rem);
     max-width: calc(16.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-3 {
     min-width: 25%; }
@@ -1341,8 +1341,8 @@ textarea {
     max-width: 25%; }
   .clefs > .clefs.clef.wide-3, .clefs > .clefs[class*="clef-"].wide-3 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
+        -ms-flex: 1 0 calc(25% + 1.5rem);
+            flex: 1 0 calc(25% + 1.5rem);
     max-width: calc(25% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-4 {
     min-width: 33.33333%; }
@@ -1353,8 +1353,8 @@ textarea {
     max-width: 33.33333%; }
   .clefs > .clefs.clef.wide-4, .clefs > .clefs[class*="clef-"].wide-4 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%;
+        -ms-flex: 1 0 calc(33.33333% + 1.5rem);
+            flex: 1 0 calc(33.33333% + 1.5rem);
     max-width: calc(33.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-5 {
     min-width: 41.66667%; }
@@ -1365,8 +1365,8 @@ textarea {
     max-width: 41.66667%; }
   .clefs > .clefs.clef.wide-5, .clefs > .clefs[class*="clef-"].wide-5 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 41.66667%;
-            flex: 1 0 41.66667%;
+        -ms-flex: 1 0 calc(41.66667% + 1.5rem);
+            flex: 1 0 calc(41.66667% + 1.5rem);
     max-width: calc(41.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-6 {
     min-width: 50%; }
@@ -1377,8 +1377,8 @@ textarea {
     max-width: 50%; }
   .clefs > .clefs.clef.wide-6, .clefs > .clefs[class*="clef-"].wide-6 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+        -ms-flex: 1 0 calc(50% + 1.5rem);
+            flex: 1 0 calc(50% + 1.5rem);
     max-width: calc(50% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-7 {
     min-width: 58.33333%; }
@@ -1389,8 +1389,8 @@ textarea {
     max-width: 58.33333%; }
   .clefs > .clefs.clef.wide-7, .clefs > .clefs[class*="clef-"].wide-7 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 58.33333%;
-            flex: 1 0 58.33333%;
+        -ms-flex: 1 0 calc(58.33333% + 1.5rem);
+            flex: 1 0 calc(58.33333% + 1.5rem);
     max-width: calc(58.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-8 {
     min-width: 66.66667%; }
@@ -1401,8 +1401,8 @@ textarea {
     max-width: 66.66667%; }
   .clefs > .clefs.clef.wide-8, .clefs > .clefs[class*="clef-"].wide-8 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 66.66667%;
-            flex: 1 0 66.66667%;
+        -ms-flex: 1 0 calc(66.66667% + 1.5rem);
+            flex: 1 0 calc(66.66667% + 1.5rem);
     max-width: calc(66.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-9 {
     min-width: 75%; }
@@ -1413,8 +1413,8 @@ textarea {
     max-width: 75%; }
   .clefs > .clefs.clef.wide-9, .clefs > .clefs[class*="clef-"].wide-9 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 75%;
-            flex: 1 0 75%;
+        -ms-flex: 1 0 calc(75% + 1.5rem);
+            flex: 1 0 calc(75% + 1.5rem);
     max-width: calc(75% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-10 {
     min-width: 83.33333%; }
@@ -1425,8 +1425,8 @@ textarea {
     max-width: 83.33333%; }
   .clefs > .clefs.clef.wide-10, .clefs > .clefs[class*="clef-"].wide-10 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 83.33333%;
-            flex: 1 0 83.33333%;
+        -ms-flex: 1 0 calc(83.33333% + 1.5rem);
+            flex: 1 0 calc(83.33333% + 1.5rem);
     max-width: calc(83.33333% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-11 {
     min-width: 91.66667%; }
@@ -1437,8 +1437,8 @@ textarea {
     max-width: 91.66667%; }
   .clefs > .clefs.clef.wide-11, .clefs > .clefs[class*="clef-"].wide-11 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 91.66667%;
-            flex: 1 0 91.66667%;
+        -ms-flex: 1 0 calc(91.66667% + 1.5rem);
+            flex: 1 0 calc(91.66667% + 1.5rem);
     max-width: calc(91.66667% + 1.5rem); }
   .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto).wide-12 {
     min-width: 100%; }
@@ -1449,8 +1449,8 @@ textarea {
     max-width: 100%; }
   .clefs > .clefs.clef.wide-12, .clefs > .clefs[class*="clef-"].wide-12 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+        -ms-flex: 1 0 calc(100% + 1.5rem);
+            flex: 1 0 calc(100% + 1.5rem);
     max-width: calc(100% + 1.5rem); } }
 
 /* /RESPONSIVE*/

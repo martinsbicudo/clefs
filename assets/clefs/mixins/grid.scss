@@ -9,19 +9,22 @@
   .clefs {
     //widths specifics
     @for $i from 1 through $columns {
-      //correction conflict with auto width .clefs
-      &:not(.-claviers):not(.-auto_disabled) > .clefs {
-        &:not(.clef):not([class*="clef-"]):not(.-noauto).#{$tag}-#{$i} {
+      //------------ CONFLICT CORRECTION
+      //conflict correction with auto width .clefs
+      &:not(.-claviers, .-auto_disabled) > .clefs {
+        &:not(.clef, [class*="clef-"], .-noauto).#{$tag}-#{$i} {
           min-width: calc((100% / #{$columns} * #{$i}));
         }
       }
+      //------------ /CONFLICT CORRECTION
+
       > :not(.clefs):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
       > .clefs:not(.clef, [class*="clef-"]).#{$tag}-#{$i} {
         flex: 1 0 calc((100% / #{$columns} * #{$i}));
         max-width: calc((100% / #{$columns} * #{$i}));
       }
       > .clefs:matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
-        flex: 1 0 calc((100% / #{$columns} * #{$i}));
+        flex: 1 0 calc((100% / #{$columns} * #{$i}) + #{$space});
         max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
       }
     }
