@@ -124,36 +124,36 @@ textarea {
   -ms-flex-line-pack: end;
       align-content: flex-end; }
 
-.clefs:not(.-claviers) > .-intop {
+.clefs:not(.-claviers) > .-in_top {
   -ms-flex-item-align: start;
       align-self: flex-start; }
 
-.clefs:not(.-claviers) > .-inmiddle {
+.clefs:not(.-claviers) > .-in_middle {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center; }
 
-.clefs:not(.-claviers) > .-inbottom {
+.clefs:not(.-claviers) > .-in_bottom {
   -ms-flex-item-align: end;
       align-self: flex-end; }
 
-.clefs:not(.-claviers) > .-instretch {
+.clefs:not(.-claviers) > .-in_stretch {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch; }
 
-.clefs:not(.-claviers) > .-inbaseline {
+.clefs:not(.-claviers) > .-in_baseline {
   -ms-flex-item-align: baseline;
       align-self: baseline; }
 
-.clefs.-claviers > .-intop {
+.clefs.-claviers > .-in_top {
   margin-bottom: auto; }
 
-.clefs.-claviers > .-inmiddle {
+.clefs.-claviers > .-in_middle {
   margin-bottom: auto;
   margin-top: auto; }
 
-.clefs.-claviers > .-inbottom {
+.clefs.-claviers > .-in_bottom {
   margin-top: auto; }
 
 /* /ALIGNS*/

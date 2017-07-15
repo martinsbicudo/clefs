@@ -90,33 +90,33 @@
     //---------------- SELF ALIGN
     //without .-claviers
     &:not(.-claviers) {
-      > .-intop {
+      > .-in_top {
         align-self: flex-start;
       }
-      > .-inmiddle {
+      > .-in_middle {
         align-self: center;
       }
-      > .-inbottom {
+      > .-in_bottom {
         align-self: flex-end;
       }
-      > .-instretch {
+      > .-in_stretch {
         align-self: stretch;
       }
-      > .-inbaseline {
+      > .-in_baseline {
         align-self: baseline;
       }
     }
 
     //with .-claviers
     &.-claviers {
-      > .-intop {
+      > .-in_top {
         margin-bottom: auto;
       }
-      > .-inmiddle {
+      > .-in_middle {
         margin-bottom: auto;
         margin-top: auto;
       }
-      > .-inbottom {
+      > .-in_bottom {
         margin-top: auto;
       }
     }
