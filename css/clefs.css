@@ -508,7 +508,7 @@ textarea {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; }
-  .clefs .-reverse:not(.-score):not(.-claviers) {
+  .clefs.-reverse:not(.-claviers) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -516,9 +516,6 @@ textarea {
   .clefs.-score {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .clefs.-score.-reverse {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse; }
   .clefs.-score.-revall {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;

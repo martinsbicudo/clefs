@@ -57,7 +57,7 @@
     }
 
     //reverse
-    .-reverse:not(.-score, .-claviers) {
+    &.-reverse:not(.-claviers) {
       flex-direction: row-reverse;
     }
 
@@ -66,9 +66,6 @@
       flex-wrap: wrap;
     }
     //score reverse
-    &.-score.-reverse {
-      flex-wrap: wrap-reverse;
-    }
     &.-score.-revall {
       flex-wrap: wrap-reverse;
       flex-direction: row-reverse;
