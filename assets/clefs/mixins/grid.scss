@@ -50,7 +50,6 @@
   $debug: map-get($enables, debug);
   $grids: map-get($enables, grids);
   $max: map-get($enables, max);
-  $min: map-get($enables, min);
   $offset: map-get($enables, offset);
   $order: map-get($enables, order);
   $responsive: map-get($enables, responsive);
@@ -62,7 +61,6 @@
   @if($debug){@include debug($space);}
   @if($grids){@include grids($space);}
   @if($max){@include max($columns);}
-  @if($min){@include min($columns);}
   @if($offset){@include offset($columns);}
   @if($order){@include order($columns);}
   @if($responsive){@include responsive($values);}

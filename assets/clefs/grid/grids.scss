@@ -29,6 +29,12 @@
     flex-basis: 100%;
     min-width: 100%;
   }
+
+  //main .clefs no auto width
+  :not(.clefs) > .clefs.-noauto {
+    flex: 0 0 auto;
+  }
+
   .clefs {
     display: flex;
     align-items: stretch;
@@ -44,8 +50,10 @@
     }
 
     //.clefs no auto width
-    &:not(.clef, [class*="clef-"]).-noauto {
-      flex: 0 0 auto;
+    > .clefs {
+      &:not(.clef, [class*="clef-"]).-noauto {
+        flex: 0 0 auto;
+      }
     }
 
     //reverse
