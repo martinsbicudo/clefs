@@ -479,6 +479,11 @@ textarea {
   margin-bottom: -12px;
   margin-bottom: -0.75rem; }
 
+:not(.clefs) > .clefs:not(.-noauto) {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-width: 100%; }
+
 .clefs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,7 +495,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-  .clefs:not(.clef):not([class*="clef-"]):not(.-noauto) {
+  .clefs:not(.-claviers):not(.-auto_disabled) > .clefs:not(.clef):not([class*="clef-"]):not(.-noauto) {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     min-width: 100%; }

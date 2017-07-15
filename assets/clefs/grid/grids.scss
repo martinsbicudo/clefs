@@ -24,15 +24,23 @@
     margin-bottom: ($space / 2) * -1;
   }
 
+  //main .clefs auto width
+  :not(.clefs) > .clefs:not(.-noauto) {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
   .clefs {
     display: flex;
     align-items: stretch;
     flex-direction: row;
 
     //.clefs auto width
-    &:not(.clef, [class*="clef-"], .-noauto) {
-        flex-basis: 100%;
-        min-width: 100%;
+    //not auto if direct child from .-claviers/.-auto_disabled
+    &:not(.-claviers, .-auto_disabled) > .clefs {
+      &:not(.clef, [class*="clef-"], .-noauto) {
+          flex-basis: 100%;
+          min-width: 100%;
+      }
     }
 
     //.clefs no auto width
