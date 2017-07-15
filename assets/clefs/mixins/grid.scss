@@ -6,15 +6,13 @@
   $tags: map-get($values, tags);
   $i: index(map-keys($tags), $tag);
 
-  .clefs {
+  .clefs:not(.-claviers) {
     //widths specifics
     @for $i from 1 through $columns {
       //------------ CONFLICT CORRECTION
       //conflict correction with auto width .clefs
-      &:not(.-claviers, .-auto_disabled) > .clefs {
-        &:not(.clef, [class*="clef-"], .-noauto).#{$tag}-#{$i} {
-          min-width: calc((100% / #{$columns} * #{$i}));
-        }
+      > .clefs:not(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+        min-width: auto !important;
       }
       //------------ /CONFLICT CORRECTION
 
