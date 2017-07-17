@@ -8,6 +8,8 @@
 //CALL COMPONENTS
     @include clefs((
       'grid': (
-        enable: true
+        enables: (
+          decrease: false
+        )
       )
     ));

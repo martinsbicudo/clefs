@@ -1,62 +1,62 @@
 //MIXINS GRID
 //grids class
-@mixin first-content($tag, $i, $only) {
-  @if($only) {
-    > .clefs:not(.clef, [class*="clef-"], .-only).#{$tag}-#{$i} {
+@mixin first-content($tag, $i, $type) {
+  @if not($type) {
+    > .clefs:not(.clef, [class*="clef-"], .-decrease, .-increase).#{$tag}-#{$i} {
       @content;
     }
   }@else{
-    > .clefs:not(.clef, [class*="clef-"]).-only.#{$tag}-#{$i} {
+    > .clefs:not(.clef, [class*="clef-"]).-#{$type}.#{$tag}-#{$i} {
       @content;
     }
   }
 }
-@mixin second-content($tag, $i, $only) {
-  @if($only) {
-    > :not(.clefs, .-only):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
-    > .clefs:not(.clef, [class*="clef-"], .-only).#{$tag}-#{$i} {
+@mixin second-content($tag, $i, $type) {
+  @if not($type) {
+    > :not(.clefs, .-decrease, .-increase):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
+    > .clefs:not(.clef, [class*="clef-"], .-decrease, .-increase).#{$tag}-#{$i} {
       @content;
     }
   }@else{
-    > :not(.clefs):matches(.clef, [class*="clef-"]).-only.#{$tag}-#{$i},
-    > .clefs:not(.clef, [class*="clef-"]).-only.#{$tag}-#{$i} {
+    > :not(.clefs):matches(.clef, [class*="clef-"]).-#{$type}.#{$tag}-#{$i},
+    > .clefs:not(.clef, [class*="clef-"]).-#{$type}.#{$tag}-#{$i} {
       @content;
     }
   }
 }
-@mixin third-content($tag, $i, $only) {
-  @if($only) {
-    > .clefs:not(.-only):matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+@mixin third-content($tag, $i, $type) {
+  @if not($type) {
+    > .clefs:not(.-decrease, .-increase):matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
       @content;
     }
   }@else{
-    > .clefs:matches(.clef, [class*="clef-"]).-only.#{$tag}-#{$i} {
+    > .clefs:matches(.clef, [class*="clef-"]).-#{$type}.#{$tag}-#{$i} {
       @content;
     }
   }
 }
 
 //grid style only
-@mixin grid-style($tag, $i, $columns, $space, $only) {
+@mixin grid-style($tag, $i, $columns, $space, $type) {
   //------------ CONFLICT CORRECTION
   //conflict correction with auto width .clefs
-  @include first-content($tag, $i, $only){
+  @include first-content($tag, $i, $type){
     min-width: auto !important;
   }
   //------------ /CONFLICT CORRECTION
 
-  @include second-content($tag, $i, $only) {
+  @include second-content($tag, $i, $type) {
     flex: 1 0 calc((100% / #{$columns} * #{$i}));
     max-width: calc((100% / #{$columns} * #{$i}));
   }
-  @include third-content($tag, $i, $only){
+  @include third-content($tag, $i, $type){
     flex: 1 0 calc((100% / #{$columns} * #{$i}) + #{$space});
     max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
   }
 }
 
 //grid queries
-@mixin grid-query($tag, $values, $only: false) {
+@mixin grid-query($tag, $values, $type) {
   $columns: map-get($values, columns);
   $space: map-get($values, space);
   $tags: map-get($values, tags);
@@ -65,7 +65,7 @@
   .clefs:not(.-claviers) {
     //widths specifics
     @for $i from 1 through $columns {
-      @include grid-style($tag, $i, $columns, $space, $only);
+      @include grid-style($tag, $i, $columns, $space, $type);
     }
   }
 }
@@ -84,23 +84,43 @@
     }
   }
 }
-
 @mixin grids-min($name, $tags) {
   @include query-min($name, $tags) {
     @content;
   }
 }
+@mixin grids-max($name, $tags) {
+  @include query-max($name, $tags) {
+    @content;
+  }
+}
+
+//type grids
+@mixin grids-type($name, $tags, $type: false) {
+  @if not($type) {
+    @include grids-between($name, $tags) {
+      @content;
+    }
+  }@elseif($type == "increase") {
+    @include grids-min($name, $tags) {
+      @content;
+    }
+  }@elseif($type == "decrease") {
+    @include grids-max($name, $tags) {
+      @content;
+    }
+  }@else{
+    @error "Grids type undefined!";
+  }
+}
 
 //aply grids
-@mixin aply-grids($values) {
+@mixin aply-grids($values, $type: false) {
   $tags: map-get($values, tags);
   $tags: mapSort($tags, map-values($tags));
   @each $tag in map-keys($tags) {
-    @include grids-between($tag, $tags) {
-      @include grid-query($tag, $values);
-    }
-    @include grids-min($tag, $tags) {
-      @include grid-query($tag, $values, true);
+    @include grids-type($tag, $tags, $type) {
+      @include grid-query($tag, $values, $type);
     }
   }
 }
@@ -124,6 +144,8 @@
   $offset: map-get($enables, offset);
   $order: map-get($enables, order);
   $responsive: map-get($enables, responsive);
+  $decrease: map-get($enables, decrease);
+  $increase: map-get($enables, increase);
 
   /*GRID*/
   @if($aligns){@include aligns;}
@@ -135,6 +157,8 @@
   @if($offset){@include offset($columns);}
   @if($order){@include order($columns);}
   @if($responsive){@include responsive($values);}
+  @if($decrease){@include decrease($values);}
+  @if($increase){@include increase($values);}
   /* /GRID*/
 }
 // /MIXINS GRID

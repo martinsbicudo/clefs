@@ -1,0 +1,6 @@
+@mixin increase($values) {
+  /*INCREASE*/
+  //call grids
+  @include aply-grids($values, "increase");
+  /* /INCREASE*/
+}
