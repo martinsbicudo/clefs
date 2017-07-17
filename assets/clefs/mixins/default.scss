@@ -2,4 +2,5 @@
 @mixin setComponent($component, $values) {
   @if($component == 'reset') {@include reset();}
   @if($component == 'grid') {@include grid($values);}
+  @if($component == 'debug') {@include debug($values);}
 }

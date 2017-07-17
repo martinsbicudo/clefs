@@ -1,12 +1,12 @@
 @mixin auto($columns) {
   /*AUTO WIDTHS*/
-  //modify the auto width .clef
-  .clefs {
-    //all with .-noauto
-    &.-auto_disable > .clef:not(.-noauto) {
-      flex: 0 0 auto;
-    }
+  //all with .-noauto
+  .clefs.-auto_disable > .clef:not(.-noauto) {
+    flex: 0 0 auto;
+  }
 
+  //modify the auto width .clef not inside .-claviers
+  .clefs:not(.-claviers) {
     //widths
     @for $i from 1 through $columns {
       &.-auto_#{$i}:not(.-claviers) > .clef:not(.-noauto) {

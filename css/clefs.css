@@ -163,84 +163,84 @@ textarea {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
 
-.clefs.-auto_1:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_1:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 8.33333%;
           flex: 1 0 8.33333%;
   width: 8.33333%;
   max-width: 8.33333%; }
 
-.clefs.-auto_2:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_2:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 16.66667%;
           flex: 1 0 16.66667%;
   width: 16.66667%;
   max-width: 16.66667%; }
 
-.clefs.-auto_3:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_3:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
   width: 25%;
   max-width: 25%; }
 
-.clefs.-auto_4:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_4:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 33.33333%;
           flex: 1 0 33.33333%;
   width: 33.33333%;
   max-width: 33.33333%; }
 
-.clefs.-auto_5:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_5:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 41.66667%;
           flex: 1 0 41.66667%;
   width: 41.66667%;
   max-width: 41.66667%; }
 
-.clefs.-auto_6:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_6:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
   width: 50%;
   max-width: 50%; }
 
-.clefs.-auto_7:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_7:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 58.33333%;
           flex: 1 0 58.33333%;
   width: 58.33333%;
   max-width: 58.33333%; }
 
-.clefs.-auto_8:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_8:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 66.66667%;
           flex: 1 0 66.66667%;
   width: 66.66667%;
   max-width: 66.66667%; }
 
-.clefs.-auto_9:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_9:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 75%;
           flex: 1 0 75%;
   width: 75%;
   max-width: 75%; }
 
-.clefs.-auto_10:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_10:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 83.33333%;
           flex: 1 0 83.33333%;
   width: 83.33333%;
   max-width: 83.33333%; }
 
-.clefs.-auto_11:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_11:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 91.66667%;
           flex: 1 0 91.66667%;
   width: 91.66667%;
   max-width: 91.66667%; }
 
-.clefs.-auto_12:not(.-claviers) > .clef:not(.-noauto) {
+.clefs:not(.-claviers).-auto_12:not(.-claviers) > .clef:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
@@ -408,56 +408,6 @@ textarea {
           flex: 1 0 auto; }
 
 /* /COLS*/
-/*DEBUG*/
-[clefs-debug] {
-  position: relative; }
-  [clefs-debug]:before {
-    content: "No problem found.";
-    background: #17a400;
-    min-width: 100px;
-    position: absolute;
-    color: #fff;
-    border-radius: 3px;
-    padding: 3px 5px;
-    display: block;
-    z-index: 999; }
-
-.clefs:not(.-nospace) > .clefs.clef:before, .clefs:not(.-nospace) > .clefs[class*="clef-"]:before {
-  width: calc(100% - 3.75rem);
-  top: 24px;
-  top: 1.5rem;
-  left: 24px;
-  left: 1.5rem; }
-
-.clefs.-nospace > .clefs:before, .clefs.-nospace > .clef:before, .clefs.-nospace > [class*="clef-"]:before, .clefs:not(.-nospace) > :not(.clefs).clef:before, .clefs:not(.-nospace) > :not(.clefs)[class*="clef-"]:before {
-  width: calc(100% - 2.25rem);
-  top: 12px;
-  top: 0.75rem;
-  left: 12px;
-  left: 0.75rem; }
-
-:not(.clefs) > :not(.clefs).clef:before, :not(.clefs) > :not(.clefs)[class*="clef-"]:before {
-  width: 100%;
-  top: 0;
-  left: 0; }
-
-[clefs-debug].-claviers.-score:before {
-  content: "Warning! The use of the .-claviers and .-score in the same selector can cause layout problems.";
-  background: #eaab00; }
-
-[clefs-debug].clef[class*="clef-"]:before {
-  content: "Notice! The use of the .clef and .clef-* in the same selector isn't necessary.";
-  background: #0066be; }
-
-[clefs-debug][class*="order-"].in-first:before, [clefs-debug][class*="order-"].in-last:before {
-  content: "Notice! The use of the .order- * and .in-first / .in-last classes in the same selector can generate conflict between them.";
-  background: #0066be; }
-
-:not(.clefs) > [clefs-debug]:not(.clefs).clef:before, :not(.clefs) > [clefs-debug]:not(.clefs)[class*="clef-"]:before {
-  content: "Danger! The .clef/.clef-* classes must be direct children of a .clefs class.";
-  background: #cc0000; }
-
-/* /DEBUG*/
 /*GRIDS*/
 :not(.clefs) > .clefs:not(.-nospace), .clefs:not(.-nospace).clef, .clefs:not(.-nospace)[class*="clef-"] {
   margin-top: -12px;
@@ -536,40 +486,40 @@ textarea {
 
 /* /GRIDS*/
 /*MAX WIDTH*/
-.clefs > .max-100.clef, .clefs > .max-100.clefs {
+.clefs:not(.-claviers) > .max-100.clef, .clefs:not(.-claviers) > .max-100.clefs {
   max-width: 100px; }
 
-.clefs > .max-200.clef, .clefs > .max-200.clefs {
+.clefs:not(.-claviers) > .max-200.clef, .clefs:not(.-claviers) > .max-200.clefs {
   max-width: 200px; }
 
-.clefs > .max-300.clef, .clefs > .max-300.clefs {
+.clefs:not(.-claviers) > .max-300.clef, .clefs:not(.-claviers) > .max-300.clefs {
   max-width: 300px; }
 
-.clefs > .max-400.clef, .clefs > .max-400.clefs {
+.clefs:not(.-claviers) > .max-400.clef, .clefs:not(.-claviers) > .max-400.clefs {
   max-width: 400px; }
 
-.clefs > .max-500.clef, .clefs > .max-500.clefs {
+.clefs:not(.-claviers) > .max-500.clef, .clefs:not(.-claviers) > .max-500.clefs {
   max-width: 500px; }
 
-.clefs > .max-600.clef, .clefs > .max-600.clefs {
+.clefs:not(.-claviers) > .max-600.clef, .clefs:not(.-claviers) > .max-600.clefs {
   max-width: 600px; }
 
-.clefs > .max-700.clef, .clefs > .max-700.clefs {
+.clefs:not(.-claviers) > .max-700.clef, .clefs:not(.-claviers) > .max-700.clefs {
   max-width: 700px; }
 
-.clefs > .max-800.clef, .clefs > .max-800.clefs {
+.clefs:not(.-claviers) > .max-800.clef, .clefs:not(.-claviers) > .max-800.clefs {
   max-width: 800px; }
 
-.clefs > .max-900.clef, .clefs > .max-900.clefs {
+.clefs:not(.-claviers) > .max-900.clef, .clefs:not(.-claviers) > .max-900.clefs {
   max-width: 900px; }
 
-.clefs > .max-1000.clef, .clefs > .max-1000.clefs {
+.clefs:not(.-claviers) > .max-1000.clef, .clefs:not(.-claviers) > .max-1000.clefs {
   max-width: 1000px; }
 
-.clefs > .max-1100.clef, .clefs > .max-1100.clefs {
+.clefs:not(.-claviers) > .max-1100.clef, .clefs:not(.-claviers) > .max-1100.clefs {
   max-width: 1100px; }
 
-.clefs > .max-1200.clef, .clefs > .max-1200.clefs {
+.clefs:not(.-claviers) > .max-1200.clef, .clefs:not(.-claviers) > .max-1200.clefs {
   max-width: 1200px; }
 
 /* /MAX WIDTH*/

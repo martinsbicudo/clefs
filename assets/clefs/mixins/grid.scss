@@ -124,41 +124,4 @@
     }
   }
 }
-
-//enable grid components
-@mixin grid($values) {
-  //GET VALUES
-  $space: map-get($values, space);
-  $columns: map-get($values, columns);
-  $tags: map-get($values, tags);
-  $enable: map-get($values, enable);
-  $enables: map-get($values, enables);
-
-  //ENABLES
-  $aligns: map-get($enables, aligns);
-  $auto: map-get($enables, auto);
-  $cols: map-get($enables, cols);
-  $debug: map-get($enables, debug);
-  $grids: map-get($enables, grids);
-  $max: map-get($enables, max);
-  $offset: map-get($enables, offset);
-  $order: map-get($enables, order);
-  $responsive: map-get($enables, responsive);
-  $decrease: map-get($enables, decrease);
-  $increase: map-get($enables, increase);
-
-  /*GRID*/
-  @if($aligns){@include aligns;}
-  @if($auto){@include auto($columns);}
-  @if($cols){@include cols($space, $columns);}
-  @if($debug){@include debug($space);}
-  @if($grids){@include grids($space);}
-  @if($max){@include max($columns);}
-  @if($offset){@include offset($columns);}
-  @if($order){@include order($columns);}
-  @if($responsive){@include responsive($values);}
-  @if($decrease){@include decrease($values);}
-  @if($increase){@include increase($values);}
-  /* /GRID*/
-}
 // /MIXINS GRID

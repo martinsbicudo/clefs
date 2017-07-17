@@ -27,7 +27,6 @@ $grid: (
     aligns: true,
     auto: true,
     cols: true,
-    debug: true,
     grids: true,
     max: true,
     offset: true,
@@ -38,3 +37,12 @@ $grid: (
   )
 );
 //---------------- /GRID
+
+//---------------- DEBUG
+$debug: (
+  enable: true,
+  enables: (
+    grid: true
+  )
+);
+//---------------- /DEBUG
