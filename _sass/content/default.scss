@@ -42,6 +42,14 @@
     &-steps {
       padding-left: 30px;
     }
+    .obs {
+      background: lighten($warning-color, 40%);
+      color: #606060;
+      padding: 3px 5px;
+      border-radius: 2px;
+      font-size: 14px;
+      margin-top: 5px;
+    }
 
     //class
     .class {

@@ -32,8 +32,8 @@ $grid: (
     offset: true,
     order: true,
     responsive: true,
-    decrease: true,
-    increase: true
+    greater: true,
+    lesser: true
   )
 );
 //---------------- /GRID

@@ -1,6 +1,0 @@
-@mixin decrease($values) {
-  /*DECREASE*/
-  //call grids
-  @include aply-grids($values, "decrease");
-  /* /DECREASE*/
-}

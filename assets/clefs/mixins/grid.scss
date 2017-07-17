@@ -2,7 +2,7 @@
 //grids class
 @mixin first-content($tag, $i, $type) {
   @if not($type) {
-    > .clefs:not(.clef, [class*="clef-"], .-decrease, .-increase).#{$tag}-#{$i} {
+    > .clefs:not(.clef, [class*="clef-"], .-greater, .-lesser).#{$tag}-#{$i} {
       @content;
     }
   }@else{
@@ -13,8 +13,8 @@
 }
 @mixin second-content($tag, $i, $type) {
   @if not($type) {
-    > :not(.clefs, .-decrease, .-increase):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
-    > .clefs:not(.clef, [class*="clef-"], .-decrease, .-increase).#{$tag}-#{$i} {
+    > :not(.clefs, .-greater, .-lesser):matches(.clef, [class*="clef-"]).#{$tag}-#{$i},
+    > .clefs:not(.clef, [class*="clef-"], .-greater, .-lesser).#{$tag}-#{$i} {
       @content;
     }
   }@else{
@@ -26,7 +26,7 @@
 }
 @mixin third-content($tag, $i, $type) {
   @if not($type) {
-    > .clefs:not(.-decrease, .-increase):matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
+    > .clefs:not(.-greater, .-lesser):matches(.clef, [class*="clef-"]).#{$tag}-#{$i} {
       @content;
     }
   }@else{
@@ -101,11 +101,11 @@
     @include grids-between($name, $tags) {
       @content;
     }
-  }@elseif($type == "increase") {
+  }@elseif($type == "lesser") {
     @include grids-min($name, $tags) {
       @content;
     }
-  }@elseif($type == "decrease") {
+  }@elseif($type == "greater") {
     @include grids-max($name, $tags) {
       @content;
     }

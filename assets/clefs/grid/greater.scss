@@ -1,0 +1,6 @@
+@mixin greater($values) {
+  /*DECREASE*/
+  //call grids
+  @include aply-grids($values, "greater");
+  /* /DECREASE*/
+}

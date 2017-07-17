@@ -14,8 +14,8 @@
   $offset: map-get($enables, offset);
   $order: map-get($enables, order);
   $responsive: map-get($enables, responsive);
-  $decrease: map-get($enables, decrease);
-  $increase: map-get($enables, increase);
+  $greater: map-get($enables, greater);
+  $lesser: map-get($enables, lesser);
 
   /*GRID*/
   @if($aligns){@include aligns;}
@@ -26,8 +26,8 @@
   @if($offset){@include offset($columns);}
   @if($order){@include order($columns);}
   @if($responsive){@include responsive($values);}
-  @if($decrease){@include decrease($values);}
-  @if($increase){@include increase($values);}
+  @if($greater){@include greater($values);}
+  @if($lesser){@include lesser($values);}
   /* /GRID*/
 }
 

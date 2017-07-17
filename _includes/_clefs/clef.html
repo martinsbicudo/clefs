@@ -1,0 +1,69 @@
+<div class="clefs -claviers -auto_disabled clef-12">
+  <div class="clef">
+    <h2 class="page-subtitle">
+         {{ page.subtitle[0] }}
+    </h2>
+    <div class="explanation">
+      <p class="explanation-title">Steps:</p>
+      <ol class="explanation-steps">
+        <li>Create a <span class="class">.clefs</span> box</li>
+        <li>Create as many <span class="class">.clef</span> elements</li>
+      </ol>
+    </div>
+  </div>
+  <div class="clefs">
+    <div class="clef">
+      <div class="ex-first">
+        .clef
+      </div>
+    </div>
+    <div class="clef">
+      <div class="ex-danger">
+        .clef
+      </div>
+    </div>
+    <div class="clef">
+      <div class="ex-success">
+        .clef
+      </div>
+    </div>
+    <div class="clef">
+      <div class="ex-second">
+        .clef
+      </div>
+    </div>
+  </div>
+  <div class="clef">
+<!-- CODE HERE -->
+<div class="code-box">
+<div class="options">
+  <button class="code-btn see">See All</button>
+  <button class="code-btn copy">Copy</button>
+</div>
+<pre class="pre" data-overflow="true">
+<div class="lines">
+{% for i in (1..14) %}{{i}}
+{% endfor %}
+</div>
+<code data-lang="html">
+  &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clefs"</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
+      .clef
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
+      .clef
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
+      .clef
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
+      .clef
+    &lt;/<span class="tg">div</span>&gt;
+  &lt;/<span class="tg">div</span>&gt;<br>
+</code>
+</pre>
+</div>
+
+<!-- //END CODE HERE -->
+  </div>
+</div>
