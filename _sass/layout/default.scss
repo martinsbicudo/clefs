@@ -1,12 +1,11 @@
 /*DEFAULT*/
   body {
-    @extend .font-roboto;
+    @extend .font-tertiary;
   }
   .main {
     display: flex;
     min-height: 100vh;
 
     .page { flex: 1 0 0% }
-    .content { @extend .pd-20 }
   }
 /* /DEFAULT*/

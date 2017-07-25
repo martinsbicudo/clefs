@@ -3,13 +3,18 @@ layout: default
 ---
 
 <section class="clefs">
-  <div class="clef">
+  <div class="clef -nospace">
     <div class="page-top">
       <h1 class="page-title">{{ page.title }}</h1>
       <p class="page-description">
         {{ page.description }}
         <i class="fa fa-music"></i>
       </p>
+    </div>
+    <div class="subpages">
+      <ul class="subpages-box clefs -nospace -score -auto_disabled">
+        {% include _subpages/_set.html %}
+      </ul>
     </div>
   </div>
 </section>

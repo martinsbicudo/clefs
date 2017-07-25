@@ -1,4 +1,4 @@
-<div class="clefs -claviers -auto_disabled clef-12">
+<div class="content-box clefs -claviers">
   <div class="clef">
     <h2 class="page-subtitle">
          {{ page.subtitle[2] }}
@@ -9,7 +9,9 @@
         <li>Create a <span class="class">.clefs</span> box with <span class="class">.-score</span></li>
         <li>Create as many <span class="class">.clef/.clef-*</span> elements</li>
       </ol>
-      <p class="obs"><strong>Obs:</strong> does not work with <span class="class">.-claviers</span></p>
+      <p class="obs"><strong>
+        Obs:</strong> does not work with <span class="class">.-claviers</span>
+      </p>
     </div>
   </div>
   <div class="clefs -score">
@@ -38,6 +40,11 @@
         .clef
       </div>
     </div>
+    <div class="clef-12">
+      <div class="ex-warning">
+        .clef-12
+      </div>
+    </div>
   </div>
   <div class="clef">
 <!-- CODE HERE -->
@@ -48,7 +55,7 @@
 </div>
 <pre class="pre" data-overflow="true">
 <div class="lines">
-{% for i in (1..17) %}{{i}}
+{% for i in (1..20) %}{{i}}
 {% endfor %}
 </div>
 <code data-lang="html">
@@ -67,6 +74,9 @@
     &lt;/<span class="tg">div</span>&gt;
     &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
+    &lt;/<span class="tg">div</span>&gt;
+    &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef-12"</span>&gt;
+      .clef-12
     &lt;/<span class="tg">div</span>&gt;
   &lt;/<span class="tg">div</span>&gt;<br>
 </code>

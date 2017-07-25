@@ -1,7 +1,7 @@
-<div class="clefs -claviers -auto_disabled clef-12">
+<div class="content-box clefs -claviers">
   <div class="clef">
     <h2 class="page-subtitle">
-         {{ page.subtitle[1] }}
+         {{ page.subtitle[3] }}
     </h2>
     <div class="explanation">
       <p class="explanation-title">Steps:</p>
@@ -9,6 +9,9 @@
         <li>Create a <span class="class">.clefs</span> box with <span class="class">.-claviers</span></li>
         <li>Create as many <span class="class">.clef</span> elements</li>
       </ol>
+      <p class="obs"><strong>
+        Obs:</strong> does not work with <span class="class">.-score</span>
+      </p>
     </div>
   </div>
   <div class="clefs -claviers">
@@ -46,7 +49,7 @@
 {% endfor %}
 </div>
 <code data-lang="html">
-  &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clefs"</span>&gt;
+  &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clefs -claviers"</span>&gt;
     &lt;<span class="tg">div <span class="at">class</span></span>=<span class="vl">"clef"</span>&gt;
       .clef
     &lt;/<span class="tg">div</span>&gt;

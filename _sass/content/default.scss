@@ -1,17 +1,56 @@
 //CONTENT
+  .content {
+    @extend .pd-20;
+
+    &-box {
+      margin-bottom: 20px;
+    }
+  }
+  .subpages {
+    &-box { padding: 5px }
+    &-item { margin: 5px }
+    &-item[data-active="true"] .subpages-link,
+    &-item:hover:not([data-active="true"]) .subpages-link {
+      color: #fff;
+    }
+    &-item[data-active="true"] .subpages-link {
+      background: $second-color;
+      border-color: $second-color;
+    }
+    &-item:hover:not([data-active="true"]) .subpages-link {
+      background: $first-color;
+      border-color: $first-color;
+    }
+    &-item:not(:hover):not([data-active="true"]) .subpages-link {
+      background: whitesmoke;
+      color: #9a9a9a;
+      border-color: #9a9a9a;
+    }
+    &-link {
+      @extend .font-tertiary;
+      text-transform: uppercase;
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 3px;
+      border-width: 1px;
+      border-style: solid;
+      transition: .2s;
+    }
+  }
   .page-top {
     @extend .pd-20;
     background: whitesmoke;
   }
   .page-title {
-    @extend .font-lobster;
+    @extend .font-secondary;
     @extend .text-center;
-    @extend .size-100;
+    @extend .size-60;
     color: #0e0e0e;
   }
 
   .page-description {
-    @extend .font-khand;
+    @extend .font-primary;
     @extend .text-center;
     @extend .size-20;
     padding: 10px 0;
@@ -22,7 +61,7 @@
 
   .page-subtitle {
     @extend .size-40;
-    @extend .font-khand;
+    @extend .font-primary;
     font-weight: lighter;
     color: #606060;
     text-transform: uppercase;

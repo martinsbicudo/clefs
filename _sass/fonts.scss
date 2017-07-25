@@ -1,16 +1,16 @@
-//Khand
+//Primary
 @import url('https://fonts.googleapis.com/css?family=Khand');
-//Lobster
-@import url('https://fonts.googleapis.com/css?family=Lobster');
-//Roboto
+//Secondary
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script');
+//Tertiary
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-.font-khand {
+.font-primary {
   font-family: 'Khand', sans-serif;
 }
-.font-lobster {
-  font-family: 'Lobster', cursive;
+.font-secondary {
+  font-family: 'Petit Formal Script', cursive;
 }
-.font-roboto {
+.font-tertiary {
   font-family: 'Roboto', sans-serif;
 }
