@@ -249,6 +249,9 @@ textarea {
 
 /* /AUTO WIDTHS*/
 /*COLS*/
+.clefs .clef {
+  max-width: 100%; }
+
 .clefs > .clef.-noauto {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -402,7 +405,12 @@ textarea {
   padding: 12px;
   padding: 0.75rem; }
 
-.clefs:not([class*="-auto_"]):not(.-auto_disable) > .clef:not(.-noauto), .clefs:not([class*="-auto_"]):not(.-auto_disable) > .clefs:not(.-noauto) {
+.clefs:not([class*="-auto_"]):not(.-auto_disable):not(.-claviers) > .clef:not(.-noauto), .clefs:not([class*="-auto_"]):not(.-auto_disable):not(.-claviers) > .clefs:not(.-noauto) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%; }
+
+.clefs.-claviers:not([class*="-auto_"]):not(.-auto_disable) > .clef:not(.-noauto), .clefs.-claviers:not([class*="-auto_"]):not(.-auto_disable) > .clefs:not(.-noauto) {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto; }
