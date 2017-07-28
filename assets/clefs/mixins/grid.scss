@@ -46,11 +46,11 @@
   //------------ /CONFLICT CORRECTION
 
   @include second-content($tag, $i, $type) {
-    flex: 1 0 calc((100% / #{$columns} * #{$i}));
+    flex: 1 1 calc((100% / #{$columns} * #{$i}));
     max-width: calc((100% / #{$columns} * #{$i}));
   }
   @include third-content($tag, $i, $type){
-    flex: 1 0 calc((100% / #{$columns} * #{$i}) + #{$space});
+    flex: 1 1 calc((100% / #{$columns} * #{$i}) + #{$space});
     max-width: calc((100% / #{$columns} * #{$i}) + #{$space});
   }
 }

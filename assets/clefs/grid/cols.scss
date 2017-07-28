@@ -1,9 +1,6 @@
 @mixin cols($space, $columns) {
   /*COLS*/
   .clefs {
-    //clef max width
-    .clef { max-width: 100% }
-
     //.clef without auto width
     > .clef.-noauto {
       flex: 0 0 auto;
@@ -32,15 +29,9 @@
   }
 
   //auto width
-  .clefs:not([class*="-auto_"], .-auto_disable, .-claviers) {
+  .clefs:not([class*="-auto_"], .-auto_disable) {
     > :matches(.clef, .clefs):not(.-noauto) {
-      flex: 1 0 100%;
-    }
-  }
-  //auto width
-  .clefs.-claviers:not([class*="-auto_"], .-auto_disable) {
-    > :matches(.clef, .clefs):not(.-noauto) {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
     }
   }
   /* /COLS*/
