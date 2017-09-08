@@ -6,12 +6,12 @@
   }
   .social-link {
     > .fa {
-      color: #000;
+      color: #fff;
       transition: .1s;
       font-size: 22px;
     }
     &:not(:hover) .fa {
-      color: lighten(gray, 10%);
+      color: darkgrey;
       transform: scale(.9);
     }
   }
@@ -54,6 +54,7 @@
     padding: 15px;
     transition: .2s;
     width: 100%;
+    border-radius: 0 0 5px 0;
 
     //bars
     .bar:before,

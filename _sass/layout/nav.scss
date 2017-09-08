@@ -6,7 +6,6 @@
   &,
   .list {
     min-height: 100vh;
-    padding-top: 50px;
   }
   .list {
     width: inherit;
@@ -34,13 +33,13 @@
     .link { z-index: 1 }
     .fa {
       @extend .bg-first;
-      box-shadow: .05em 0 .05em 0 rgba(0, 0, 0, 0.2);
+      box-shadow: .05em 0 .05em 0 rgba(0, 0, 0, .2);
     }
   }
   &,
   .link,
   .link .fa {
-    background: #0e0e0e;
+    background: saturate(lighten($second-color, 2%), 10%);
   }
   .link {
     display: block;

@@ -1,0 +1,7 @@
+@include query-min('tablet') {
+  .header {
+    .open-nav {
+      display: none;
+    }
+  }
+}

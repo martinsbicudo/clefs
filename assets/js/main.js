@@ -33,4 +33,15 @@ $(function(){
     if(overflow == 'false')
       container.attr('data-overflow', 'true');
   });
+
+  $('.open-nav').on('click', function(){
+    var active = $(this).attr('data-active');
+    $(this).attr('data-active', 'true');
+    $('.nav').attr('data-active', 'true');
+
+    if(active == "true") {
+      $(this).attr('data-active', 'false');
+      $('.nav').attr('data-active', 'false');
+    }
+  });
 });

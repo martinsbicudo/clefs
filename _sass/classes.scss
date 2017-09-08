@@ -13,7 +13,6 @@
 
   //code
   .code-box {
-    border-radius: 3px;
     position: relative;
     overflow: hidden;
 
@@ -36,16 +35,17 @@
     }
     .code-btn {
       @extend .font-primary;
-      background: $first-color;
       color: #fff;
+      background: transparent;
       text-transform: uppercase;
       padding: 2px 10px;
       cursor: pointer;
-      border-radius: 0 3px 0 3px;
       margin-left: 3px;
+      transition: .2s;
+      border-bottom: 2px solid $first-color;
 
       &:not(:hover) {
-        @extend .bg-second;
+        border-color: transparent;
       }
     }
     .lines,
@@ -57,24 +57,23 @@
       text-align: right;
       white-space: pre-line;
       padding: 0 5px 0 10px;
-      background: #1b1b1b;
+      background: #000;
       color: #fff;
-      border-right: 1px solid #252525;
       user-select: none;
+      border-left: 2px solid $warning-color;
     }
     code {
       flex: 1;
-      background: whitesmoke;
+      background: #000;
       display: block;
       white-space: pre-wrap;
       font-family: monospace;
-      color: gray;
-      border-left: 1px solid #000;
+      color: lightgray;
     }
 
     //colors
-    .tg { @extend .color-first; }
-    .at { color: #c66d3b; }
-    .vl { color: #98c379; }
+    .tg { @extend .color-first }
+    .at { @extend .color-warning }
+    .vl { color: #fff; }
   }
 /* /CLASSES*/

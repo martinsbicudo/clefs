@@ -1,6 +1,7 @@
 /*DEFAULT*/
   body {
     @extend .font-tertiary;
+    @extend .bg-second;
   }
   .main {
     display: flex;

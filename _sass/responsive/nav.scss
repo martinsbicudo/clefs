@@ -1,0 +1,14 @@
+@include query-max('tablet') {
+  .nav {
+    transition: .2s;
+
+    &[data-active="false"] {
+      transform: translateX(-150%);
+      position: fixed;
+    }
+    &,
+    .list {
+      padding-top: 50px;
+    }
+  }
+}

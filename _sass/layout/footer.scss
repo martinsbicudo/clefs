@@ -1,0 +1,32 @@
+/*FOOTER*/
+.footer {
+  padding: 20px;
+  background: lighten($second-color, 1%);
+  font-size: 14px;
+
+  //menu footer
+  .quick-links {
+    .link {
+      text-decoration: none;
+      color: darkgrey;
+      &:hover { @extend .color-white }
+    }
+  }
+
+  //by
+  .by {
+    color: darkgrey;
+
+    .link {
+      @extend .color-white;
+      text-decoration: none;
+      &:hover { @extend .color-first }
+    }
+  }
+
+  //picpay
+  .picpay {
+    width: 100px;
+  }
+}
+/* /FOOTER*/

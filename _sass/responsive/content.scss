@@ -1,0 +1,10 @@
+@include query-max('tablet') {
+  .page-title {
+    font-size: 40px;
+  }
+}
+@include query-max('plus') {
+  .page-title {
+    font-size: 28px;
+  }
+}

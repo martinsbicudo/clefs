@@ -8,7 +8,8 @@
   'components/paddings',
   'components/examples',
   'components/margins',
-  'components/sizes';
+  'components/sizes',
+  'components/mixins';
 
 //DEFAULT
 @import
@@ -19,8 +20,16 @@
 @import
   'layout/default',
   'layout/header',
+  'layout/footer',
   'layout/nav';
 
 //CONTENT
 @import
   'content/default';
+
+//RESPONSIVE
+@import
+  'responsive/content',
+  'responsive/nav',
+  'responsive/header',
+  'responsive/components/examples';
