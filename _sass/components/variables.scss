@@ -8,6 +8,15 @@
   $warning-color: #ffb916;
   $danger-color: #ff0030;
 
+//TAGS RESPONSIVE
+$responsive: (
+  'mobile': 368px,
+  'plus': 568px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'wide': 1280px
+);
+
 //ARRAYS
   $tags: "first" "second" "info" "success" "warning" "danger";
   $colors: $first-color $second-color $info-color $success-color $warning-color $danger-color;
