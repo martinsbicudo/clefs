@@ -1,13 +1,13 @@
 //COLORS
   $first-color: #ff004e;
-  $second-color: #0e0e0e;
+  $second-color: #1b0008;
 
   //status
   $info-color: #0076be;
   $success-color: #61a530;
-  $warning-color: #c66d3b;
+  $warning-color: #ffb916;
   $danger-color: #ff0030;
 
 //ARRAYS
-  $tags: "first";
-  $colors: $first-color;
+  $tags: "first" "second" "info" "success" "warning" "danger";
+  $colors: $first-color $second-color $info-color $success-color $warning-color $danger-color;

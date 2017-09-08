@@ -1,28 +1,12 @@
 /*EXAMPLES*/
-  [class*="ex-"] {
+  .example {
     font-size: .8em;
     text-transform: uppercase;
     border-radius: 3px;
     padding: 20px 10px;
     text-align: center;
-    color: #fff;
-  }
-  .ex-first {
-    background: transparentize($first-color, .1);
-  }
-  .ex-second {
-    background: transparentize($second-color, .1);
-  }
-  .ex-info {
-    background: transparentize($info-color, .1);
-  }
-  .ex-success {
-    background: transparentize($success-color, .1);
-  }
-  .ex-warning {
-    background: transparentize($warning-color, .1);
-  }
-  .ex-danger {
-    background: transparentize($danger-color, .1);
+    color: $first-color;
+    background: transparentize($first-color, .9);
+    border: 1px solid $first-color;
   }
 /* /EXAMPLES*/
