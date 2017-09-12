@@ -8,5 +8,6 @@
     color: $first-color;
     background: transparentize($first-color, .9);
     border: 1px solid $first-color;
+    white-space: nowrap;
   }
 /* /EXAMPLES*/

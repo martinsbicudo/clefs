@@ -56,19 +56,19 @@
     .lines {
       text-align: right;
       white-space: pre-line;
-      padding: 0 5px 0 10px;
+      padding: 10px 5px 10px 10px;
       background: #000;
       color: #fff;
       user-select: none;
       border-left: 2px solid $warning-color;
     }
     code {
-      flex: 1;
+      flex: 1 1 auto;
       background: #000;
       display: block;
-      white-space: pre-wrap;
       font-family: monospace;
       color: lightgray;
+      padding: 10px;
     }
 
     //colors

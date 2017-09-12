@@ -1,12 +1,12 @@
-<li class="subpages-item clef" data-active="true">
-  <a class="subpages-link" href="#">Cols</a>
+<li class="subpages-item clef" data-active="{% if page.title == 'Columns' %}true{% else %}false{% endif %}">
+  <a class="subpages-link" href="/clefs/grid">Cols</a>
 </li>
-<li class="subpages-item clef">
-  <a class="subpages-link" href="#">Score</a>
+<li class="subpages-item clef" data-active="{% if page.title == 'Score' %}true{% else %}false{% endif %}">
+  <a class="subpages-link" href="/clefs/grid/score">Score</a>
 </li>
-<li class="subpages-item clef">
-  <a class="subpages-link" href="#">Claviers</a>
+<li class="subpages-item clef" data-active="{% if page.title == 'Claviers' %}true{% else %}false{% endif %}">
+  <a class="subpages-link" href="/clefs/grid/claviers">Claviers</a>
 </li>
-<li class="subpages-item clef">
-  <a class="subpages-link" href="#">Responsive</a>
+<li class="subpages-item clef" data-active="{% if page.title == 'Responsive' %}true{% else %}false{% endif %}">
+  <a class="subpages-link" href="/clefs/grid/responsive">Responsive</a>
 </li>

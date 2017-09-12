@@ -7,6 +7,9 @@
     display: flex;
     min-height: 100vh;
 
-    .page { flex: 1 1 0% }
+    .page {
+      flex: 1 1 0%;
+      overflow: hidden;
+    }
   }
 /* /DEFAULT*/

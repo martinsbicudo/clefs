@@ -3,12 +3,19 @@
     transition: .2s;
 
     &[data-active="false"] {
-      transform: translateX(-150%);
       position: fixed;
+      &, .list{ transform: translateX(-150%) }
     }
     &,
     .list {
       padding-top: 50px;
     }
+  }
+}
+
+@include query-max('plus') {
+  .nav {
+    position: fixed;
+    z-index: 1;
   }
 }

@@ -39,7 +39,7 @@
   &,
   .link,
   .link .fa {
-    background: saturate(lighten($second-color, 2%), 10%);
+    background: lighten($second-color, 10%);
   }
   .link {
     display: block;
